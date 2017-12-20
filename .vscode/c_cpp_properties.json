@@ -79,7 +79,7 @@
                 "C:/msys64/mingw64/include/c++/7.2.0/tr1",
                 "C:/msys64/mingw64/include/c++/7.2.0/x86_64-w64-mingw32",
                 "C:/msys64/mingw64/x86_64-w64-mingw32/include",
-                "D:/2ATA/IN204/Projet cpp/Recommender_system"
+                "D:/2ATA/IN204/Projet cpp/Cloned/recommendersystem"
             ],
             "defines": [
                 "_DEBUG",
@@ -94,7 +94,8 @@
                     "C:/msys64/mingw64/include/c++/7.2.0",
                     "C:/msys64/mingw64/include/c++/7.2.0/tr1",
                     "C:/msys64/mingw64/include/c++/7.2.0/x86_64-w64-mingw32",
-                    "C:/msys64/mingw64/x86_64-w64-mingw32/include"
+                    "C:/msys64/mingw64/x86_64-w64-mingw32/include",
+                    "D:/2ATA/IN204/Projet cpp/Cloned/recommendersystem"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
