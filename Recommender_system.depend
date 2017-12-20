@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1513365807 source:d:\2ata\in204\projet cpp\recommender_system\main.cpp
+	<iostream>
+	"Movie.h"
+	<vector>
+
+1513364521 source:d:\2ata\in204\projet cpp\recommender_system\matrix.cpp
+	"Movie.h"
+	<iostream>
+	<vector>
+
+1513365069 d:\2ata\in204\projet cpp\recommender_system\movie.h
+	<iostream>
+	<string>
+	<vector>
+
+1513364101 d:\2ata\in204\projet cpp\recommender_system\matrix.h
+	<iostream>
+	<string>
+	<vector>
+
+1513365894 source:d:\2ata\in204\projet cpp\recommender_system\movie.cpp
+	"Movie.h"
+	<iostream>
+	<vector>
+
