@@ -1,8 +1,8 @@
-#include"Matrix.h"
+#include"MatrixVector.h"
 #include<iostream>
 #include<vector>
 using namespace std;
-Matrix::Matrix(int l,int c)
+MatrixVector::MatrixVector(int l,int c):Matrix(l,c)
 {
     dimRow=l;
     dimCol=c;
@@ -12,11 +12,11 @@ Matrix::Matrix(int l,int c)
         data.push_back(0);
     }
 }
-float Matrix::getEl(int i,int j)const
+float MatrixVector::getEl(int i,int j)const
 {
     return data.at(i*dimCol+j);
 }
-void Matrix::setEl(int i,int j,float e)
+void MatrixVector::setEl(int i,int j,float e)
 {
     data.at(i*dimCol+j)=e;
 }

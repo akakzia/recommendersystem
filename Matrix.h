@@ -3,15 +3,15 @@
 #include<iostream>
 using namespace std;
 #include<vector>
-class Matrix //Matrice organisée en vector
+class Matrix //Classe abstraite
 {
+protected:
     int dimCol;
     int dimRow;
-    vector<float> data;
-public:
     Matrix(int,int);
-    ~Matrix();
-    float getEl(int,int)const;
-    void setEl(int,int,float);
+    Matrix();
+public:
+    virtual float getEl(int,int)const;
+    virtual void setEl(int,int,float);
 };
 #endif
