@@ -14,6 +14,6 @@ public:
     Rating(int rate,int idUser,int idMovie,int date);
     int getRate()const;
     int getIdUser()const;
-    int getIdFilm()const;
+    int getIdMovie()const;
 };
 #endif

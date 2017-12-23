@@ -1,28 +1,20 @@
-#include"Movie.h"
+#include"User.h"
 #include<iostream>
 #include<vector>
 using namespace std;
-Movie::Movie(int i,string t,string r,string u)
-{
+User::User(int i,int a,string occ){
     id=i;
-    title=t;
-    releaseDate=r;
-    URL=u;
-    ratings.push_back(0);
+    age=a;
+    occupation=occ;
+    ratings.push_back(0.0);
 }
-void Movie::addRating(float r)
-{
+void User::addRating(float r){
     ratings.push_back(r);
 }
-vector<float> Movie::getRating()const
-{
+vector<float> User::getRatings()const{
     return ratings;
 }
-string Movie::getTitle()const
-{
-    return title;
-}
-void Movie::getAvg(){
+void User::getAvg(){
     int i=1;
     int j=0;
     float sum;
@@ -35,4 +27,3 @@ void Movie::getAvg(){
     }
     ratings[0]=sum/j;
 }
-

@@ -9,10 +9,11 @@ class User
     int id;
     int age;
     string occupation;
-    vector<float> rating;
+    vector<float> ratings;
 public:
     User(int id,int age,string occupation);
     void addRating(float);
-    vector<float> getRating()const;
+    vector<float> getRatings()const;
+    void getAvg();
 };
 #endif
