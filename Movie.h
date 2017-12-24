@@ -13,6 +13,7 @@ class Movie
     vector<float> ratings;
 public:
     Movie(int id,string title/*,string releaseDate,string URL*/);
+    Movie();
     //void addRating(float);
     string getTitle()const;
     int getId()const;

@@ -8,6 +8,8 @@ Rating::Rating(int r,int iU,int iM/*,int d*/){
     idMovie=iM;
     //date=d;
 }
+Rating::Rating(){};
+
 int Rating::getRate()const{
     return rate;
 }
@@ -17,15 +19,6 @@ int Rating::getIdUser()const{
 int Rating::getIdMovie()const{
     return idMovie;
 }
-Rating::Rating(){};
 
-int Rating::setRate(int r){
-   rate=r;
-}
-int Rating::setIdUser(int u){
-    idUser=u;
-}
-int Rating::setIdMovie(int m){
-     idMovie=m;
-}
+
 

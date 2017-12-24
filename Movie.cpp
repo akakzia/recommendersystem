@@ -10,6 +10,8 @@ Movie::Movie(int i,string t/*,string r,string u*/)
     //URL=u;
     ratings.push_back(0);
 }
+Movie::Movie(){};
+
 /*void Movie::addRating(float r)
 {
     ratings.push_back(r);

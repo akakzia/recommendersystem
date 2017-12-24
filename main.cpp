@@ -8,13 +8,10 @@
 using namespace std;
 
 Rating* fill_rating();
-//Movie * fill_movies();
+Movie * fill_movies();
 
 int main()
 {
-
-    Rating *R;
-    R=fill_rating();
     //R=fill_rating();
     //Movie M(1, "Home", "today", "ii");
     //M.addRating(5);
@@ -23,17 +20,17 @@ int main()
     return 0;
 }
 
-//fct tekhdem ama ma3raftech na3mel return shih
+//mahabech yemchi tableau kbir barcha w ma3raftech na3mel return shih
 Rating* fill_rating(){ //create set of all ratings
 
     ifstream in_stream;
     int loop=0;
     string line;
     float rate,movieid,userid;
-    Rating R[11];
+    Rating R[855598];
 
     //Open input file.
-    in_stream.open("r.dat");
+    in_stream.open("data/user_ratedmovies-timestamps.dat");
 
     if (in_stream.fail())
     {
@@ -52,37 +49,37 @@ Rating* fill_rating(){ //create set of all ratings
 		in_stream.close(); //Closes the file
     return R;
 }
-/*
+//fct tekhdem ama ma3raftech na3mel return shih
 Movie * fill_movies(){ //create set of all movies
 
     ifstream in_stream;
-    int loop=1;
+    int loop=0;
     string line;
     float id;
     string title;
-    Movie *M[10198];
+    Movie M[20000];
 
     //Open input file.
-    in_stream.open("/data/movies.dat");
+    in_stream.open("data/movies.dat");
 
     if (in_stream.fail())
     {
         cout << "Input file opening failed";
         exit(1);
     }
-
+    getline(in_stream,line);
     while (! in_stream.eof() ) //Runs while the file is NOT at the end
 		{
             getline(in_stream,line);//Gets a single line from file
 			std::istringstream iss(line); //get numbers in the line
-            iss >>id>>title;
-            M[loop] = new Movie(id,title);
+            iss>>id>>title;
+            M[loop] = Movie(id,title);
 			loop++; //Does an increment to the variable 'loop'
 		}
 		in_stream.close(); //Closes the file
-    return *M;
+    return M;
 }
-
+/* Not done yet
 User * fill_User(){ //creat set of all moies
 
     ifstream in_stream;
