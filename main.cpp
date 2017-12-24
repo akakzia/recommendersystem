@@ -11,8 +11,6 @@ Matrix read_data();
 
 int main()
 {
-    
-
     Movie M(1, "Home", "today", "ii");
     M.addRating(5);
     vector<float> s=M.getRating();
