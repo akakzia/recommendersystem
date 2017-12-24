@@ -7,13 +7,12 @@
 #include "Movie.h"
 using namespace std;
 
-//Rating * fill_rating();
+Rating * fill_rating();
 //Movie * fill_movies();
 
 int main()
 {
-    Rating R(5,2,1);
-    //cout<<R.getRate();
+    fill_rating();
     //Movie M(1, "Home", "today", "ii");
     //M.addRating(5);
     //vector<float> s=M.getRating();
@@ -21,14 +20,14 @@ int main()
     return 0;
 }
 
-/*
+
 Rating * fill_rating(){ //create set of all ratings
 
     ifstream in_stream;
-    int loop=1;
+    int loop=0;
     string line;
     float rate,movieid,userid;
-    Rating *R[855599];
+    static Rating R[855599];
 
     //Open input file.
     in_stream.open("/data/user_ratedmovies-timestamps.dat");
@@ -38,19 +37,20 @@ Rating * fill_rating(){ //create set of all ratings
         cout << "Input file opening failed";
         exit(1);
     }
-
+    getline(in_stream,line);
     while (! in_stream.eof() ) //Runs while the file is NOT at the end
 		{
             getline(in_stream,line);//Gets a single line from file
 			std::istringstream iss(line); //get numbers in the line
             iss >>userid>>movieid>>rate;
+            cout<<userid;
             R[loop] = new Rating(rate,userid,movieid);
 			loop++; //Does an increment to the variable 'loop'
 		}
 		in_stream.close(); //Closes the file
-    return *R;
+    return R;
 }
-
+/*
 Movie * fill_movies(){ //create set of all movies
 
     ifstream in_stream;

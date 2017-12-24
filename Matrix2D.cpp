@@ -2,7 +2,9 @@
 #include<iostream>
 using namespace std;
 
-Matrix2D::Matrix2D(int rows, int columns) : dimCol(rows), dimRow(columns) {
+Matrix2D::Matrix2D(int rows, int columns):Matrix(rows,columns) {
+    dimCol = rows;
+    dimRow = columns ;
     m_totalSize = dimCol * dimRow;
     m_ptValues = new int[m_totalSize]();
 }

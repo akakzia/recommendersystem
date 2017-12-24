@@ -8,7 +8,7 @@ class Matrix //Classe abstraite
 protected:
     int dimCol;
     int dimRow;
-    //Matrix(int,int);
+    Matrix(int,int);
     //Matrix();
 public:
     virtual float getEl(int,int)const;
