@@ -17,3 +17,4 @@ int Rating::getIdUser()const{
 int Rating::getIdMovie()const{
     return idMovie;
 }
+Rating::Rating(){};

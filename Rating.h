@@ -12,6 +12,7 @@ class Rating
     //int date;
 public:
     Rating(int rate,int idUser,int idMovie/*,int date*/);
+    Rating();
     int getRate()const;
     int getIdUser()const;
     int getIdMovie()const;
