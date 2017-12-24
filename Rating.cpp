@@ -18,3 +18,14 @@ int Rating::getIdMovie()const{
     return idMovie;
 }
 Rating::Rating(){};
+
+int Rating::setRate(int r){
+   rate=r;
+}
+int Rating::setIdUser(int u){
+    idUser=u;
+}
+int Rating::setIdMovie(int m){
+     idMovie=m;
+}
+

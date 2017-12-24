@@ -16,5 +16,8 @@ public:
     int getRate()const;
     int getIdUser()const;
     int getIdMovie()const;
+    int setRate(int);
+    int setIdUser(int);
+    int setIdMovie(int);
 };
 #endif
