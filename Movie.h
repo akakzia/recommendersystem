@@ -8,13 +8,14 @@ class Movie
 {
     int id;
     string title;
-    string releaseDate;
-    string URL;
+    //string releaseDate;
+    //string URL;
     vector<float> ratings;
 public:
-    Movie(int id,string title,string releaseDate,string URL);
-    void addRating(float);
+    Movie(int id,string title/*,string releaseDate,string URL*/);
+    //void addRating(float);
     string getTitle()const;
+    int getId()const;
     vector<float> getRating()const;
     void getAvg();
 };

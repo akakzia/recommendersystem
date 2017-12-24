@@ -2,15 +2,15 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-User::User(int i,int a,string occ){
+User::User(int i/*,int a,string occ*/){
     id=i;
-    age=a;
-    occupation=occ;
+    //age=a;
+    //occupation=occ;
     ratings.push_back(0.0);
 }
-void User::addRating(float r){
+/*void User::addRating(float r){
     ratings.push_back(r);
-}
+}*/
 vector<float> User::getRatings()const{
     return ratings;
 }

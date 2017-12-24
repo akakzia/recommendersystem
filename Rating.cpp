@@ -1,11 +1,12 @@
 #include"Rating.h"
 #include<iostream>
 using namespace std;
-Rating::Rating(int r,int iU,int iM,int d){
+
+Rating::Rating(int r,int iU,int iM/*,int d*/){
     rate=r;
     idUser=iU;
     idMovie=iM;
-    date=d;
+    //date=d;
 }
 int Rating::getRate()const{
     return rate;
