@@ -1,13 +1,13 @@
-#include"MatrixMap.h"
+#include"Matrix2D.h"
 #include<iostream>
 using namespace std;
 
-Matrix2D::Matrix2D(int rows, int columns) : m_rows(rows), m_columns(columns) {
-    m_totalSize = m_rows * m_columns;
+Matrix2D::Matrix2D(int rows, int columns) : dimCol(rows), dimRow(columns) {
+    m_totalSize = dimCol * dimRow;
     m_ptValues = new int[m_totalSize]();
 }
-CMatrix::~CMatrix() {
+Matrix2D::~Matrix2D() {
     if (m_ptValues) {
         delete[] m_ptValues;
     }
-
+}

@@ -24,3 +24,85 @@
 	<iostream>
 	<vector>
 
+1514138805 source:c:\users\bader\desktop\recommendersystem\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	"Rating.h"
+	"Movie.h"
+
+1514137395 c:\users\bader\desktop\recommendersystem\rating.h
+	<iostream>
+	<string>
+	<vector>
+
+1514137662 c:\users\bader\desktop\recommendersystem\movie.h
+	<iostream>
+	<string>
+	<vector>
+
+1514139951 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
+	"Matrix2D.h"
+	<iostream>
+
+1514139915 c:\users\bader\desktop\recommendersystem\matrix2d.h
+	<iostream>
+	"Matrix.h"
+
+1514139998 c:\users\bader\desktop\recommendersystem\matrix.h
+	<iostream>
+	<vector>
+
+1514016097 source:c:\users\bader\desktop\recommendersystem\matrixmap.cpp
+	"MatrixMap.h"
+	<iostream>
+	<map>
+	<vector>
+
+1514139458 c:\users\bader\desktop\recommendersystem\matrixmap.h
+	<iostream>
+	<map>
+	<vector>
+	"Matrix.h"
+
+1514014645 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
+	"MatrixVector.h"
+	<iostream>
+	<vector>
+
+1514014645 c:\users\bader\desktop\recommendersystem\matrixvector.h
+	<iostream>
+	<vector>
+	"Matrix.h"
+
+1514137662 source:c:\users\bader\desktop\recommendersystem\movie.cpp
+	"Movie.h"
+	<iostream>
+	<vector>
+
+1514138978 source:c:\users\bader\desktop\recommendersystem\rating.cpp
+	"Rating.h"
+	<iostream>
+
+1514014645 source:c:\users\bader\desktop\recommendersystem\similarity.cpp
+	"Similarity.h"
+	<iostream>
+	<vector>
+	<math.h>
+
+1514014645 c:\users\bader\desktop\recommendersystem\similarity.h
+	<vector>
+	<iostream>
+
+1514137395 source:c:\users\bader\desktop\recommendersystem\user.cpp
+	"User.h"
+	<iostream>
+	<vector>
+
+1514137395 c:\users\bader\desktop\recommendersystem\user.h
+	<iostream>
+	<string>
+	<vector>
+

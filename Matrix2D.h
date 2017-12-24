@@ -10,6 +10,8 @@ class Matrix2D:public Matrix {
 private:
     int* m_ptValues;
     int m_totalSize;
+    int dimCol;
+    int dimRow;
 public:
     Matrix2D(int rows, int columns); // base ctor.
     ~Matrix2D(); // dtor.

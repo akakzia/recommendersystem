@@ -9,7 +9,7 @@ class MatrixMap:public Matrix //Matrice organisée en map
 {
     int dimCol;
     int dimRow;
-    map<int,vector<float>> data;    
+    map<int,vector<float> > data;
 public:
     MatrixMap(int,int);
     ~MatrixMap();
