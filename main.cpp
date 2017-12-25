@@ -7,27 +7,32 @@
 #include "Movie.h"
 using namespace std;
 
-Rating* fill_rating();
-Movie * fill_movies();
+Rating *fill_rating();
+Movie  *fill_movies();
 
 int main()
 {
-    //R=fill_rating();
-    //Movie M(1, "Home", "today", "ii");
-    //M.addRating(5);
-    //vector<float> s=M.getRating();
-    //cout << s.size();
+
+
+    //Movie function test
+    Movie *M;
+    M=fill_movies();
+    cout<<M[5000].getId()<<" "<<M[5000].getTitle()<<endl;
+    //Rating function test
+    Rating *R;
+    R=fill_rating();
+    cout<<R[1].getIdUser()<<" "<<R[1].getIdMovie()<<" "<<R[100].getRate()<<endl;
     return 0;
 }
 
-//mahabech yemchi tableau kbir barcha w ma3raftech na3mel return shih
-Rating* fill_rating(){ //create set of all ratings
+//Temchi to93ed 15
+Rating *fill_rating(){ //create set of all ratings
 
     ifstream in_stream;
     int loop=0;
     string line;
     float rate,movieid,userid;
-    Rating R[855598];
+    static Rating R[855598];
 
     //Open input file.
     in_stream.open("data/user_ratedmovies-timestamps.dat");
@@ -49,15 +54,15 @@ Rating* fill_rating(){ //create set of all ratings
 		in_stream.close(); //Closes the file
     return R;
 }
-//fct tekhdem ama ma3raftech na3mel return shih
-Movie * fill_movies(){ //create set of all movies
+// Temchi
+Movie  *fill_movies(){ //create set of all movies
 
     ifstream in_stream;
     int loop=0;
     string line;
     float id;
     string title;
-    Movie M[20000];
+    static Movie M[20000];
 
     //Open input file.
     in_stream.open("data/movies.dat");
