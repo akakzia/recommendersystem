@@ -5,10 +5,12 @@
 #include <sstream>
 #include "Rating.h"
 #include "Movie.h"
+#include "User.h"
 using namespace std;
 
 Rating *fill_rating();
 Movie  *fill_movies();
+User *fill_User();
 
 int main()
 {
@@ -17,11 +19,15 @@ int main()
     //Movie function test
     Movie *M;
     M=fill_movies();
-    cout<<M[5000].getId()<<" "<<M[5000].getTitle()<<endl;
+    cout<<M[10197].getId()<<" "<<M[10197].getTitle()<<endl;
     //Rating function test
     Rating *R;
     R=fill_rating();
-    cout<<R[1].getIdUser()<<" "<<R[1].getIdMovie()<<" "<<R[100].getRate()<<endl;
+    cout<<R[855598].getIdUser()<<" "<<R[855598].getIdMovie()<<" "<<R[855598].getRate()<<endl;
+    //User function test
+    User *U;
+    U=fill_User();
+    cout<<U[2113].getId()<<endl;
     return 0;
 }
 
@@ -62,7 +68,7 @@ Movie  *fill_movies(){ //create set of all movies
     string line;
     float id;
     string title;
-    static Movie M[20000];
+    static Movie M[10197];
 
     //Open input file.
     in_stream.open("data/movies.dat");
@@ -84,33 +90,35 @@ Movie  *fill_movies(){ //create set of all movies
 		in_stream.close(); //Closes the file
     return M;
 }
-/* Not done yet
-User * fill_User(){ //creat set of all moies
+
+User *fill_User(){ //creat set of all moies
 
     ifstream in_stream;
-    int loop=1;
+    int loop=0,loop2=0;
     string line;
-    float id;
-    string title;
-    Movie *M = new Movie[10198]
+    float userid;
+    static User U[2113];
 
     //Open input file.
-    in_stream.open("/data/movies.dat");
+    in_stream.open("data/user_ratedmovies-timestamps.dat");
 
     if (in_stream.fail())
     {
         cout << "Input file opening failed";
         exit(1);
     }
-
+    getline(in_stream,line);
     while (! in_stream.eof() ) //Runs while the file is NOT at the end
 		{
             getline(in_stream,line);//Gets a single line from file
 			std::istringstream iss(line); //get numbers in the line
-            iss >>id>>title;
-            M[loop] = Movie(id,title);
+            iss >>userid;
+            if (userid!=U[loop2].getId()){
+            loop2++;
+            U[loop2] =User(userid);
+            }
 			loop++; //Does an increment to the variable 'loop'
 		}
 		in_stream.close(); //Closes the file
-    return M;
-}*/
+    return U;
+}

@@ -8,6 +8,7 @@ User::User(int i/*,int a,string occ*/){
     //occupation=occ;
     ratings.push_back(0.0);
 }
+User::User(){};
 /*void User::addRating(float r){
     ratings.push_back(r);
 }*/
@@ -30,4 +31,8 @@ void User::getAvg(){
 
 void User::setRatings(vector<float> ratings_vector){
     ratings = ratings_vector;
-};
+}
+
+int User::getId(){
+    return id;
+}

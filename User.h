@@ -14,9 +14,11 @@ class User
     vector<float> ratings;
 public:
     User(int id/*,int age,string occupation*/);
+    User();
     //void addRating(float);
     vector<float> getRatings()const;
     void getAvg();
+    int getId();
     void setRatings(vector<float>);
 };
 #endif

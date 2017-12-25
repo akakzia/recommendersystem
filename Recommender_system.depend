@@ -77,7 +77,7 @@
 	<vector>
 	"Matrix.h"
 
-1514147294 source:c:\users\bader\desktop\recommendersystem\movie.cpp
+1514228800 source:c:\users\bader\desktop\recommendersystem\movie.cpp
 	"Movie.h"
 	<iostream>
 	<vector>
@@ -96,13 +96,14 @@
 	<vector>
 	<iostream>
 
-1514137395 source:c:\users\bader\desktop\recommendersystem\user.cpp
+1514230024 source:c:\users\bader\desktop\recommendersystem\user.cpp
 	"User.h"
 	<iostream>
 	<vector>
 
-1514137395 c:\users\bader\desktop\recommendersystem\user.h
+1514230024 c:\users\bader\desktop\recommendersystem\user.h
 	<iostream>
 	<string>
 	<vector>
+	"Rating.h"
 
