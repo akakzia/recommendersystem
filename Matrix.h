@@ -5,9 +5,10 @@ using namespace std;
 #include<vector>
 class Matrix //Classe abstraite
 {
-protected:
+public:
     int dimCol;
     int dimRow;
+protected:
     Matrix(int,int);
     Matrix();
 public:

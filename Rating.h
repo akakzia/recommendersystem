@@ -6,13 +6,12 @@ using namespace std;
 #include<vector>
 class Rating
 {
-    int rate;
+    float rate;
     int idUser;
     int idMovie;
-    int date;
 public:
-    Rating(int rate,int idUser,int idMovie,int date);
-    int getRate()const;
+    Rating(float rate,int idUser,int idMovie);
+    float getRate()const;
     int getIdUser()const;
     int getIdMovie()const;
 };

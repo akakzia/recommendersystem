@@ -24,3 +24,80 @@
 	<iostream>
 	<vector>
 
+1514241753 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\main.cpp
+	<iostream>
+	<map>
+	<vector>
+	"MatrixMap.h"
+	"Similarity.h"
+
+1513882449 d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.h
+	<iostream>
+	<string>
+	<vector>
+
+1514126494 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixvector.cpp
+	"MatrixVector.h"
+	<iostream>
+	<vector>
+
+1514133596 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixvector.h
+	<iostream>
+	<vector>
+	"Matrix.h"
+
+1514133634 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix.h
+	<iostream>
+	<vector>
+
+1513882450 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.cpp
+	"Movie.h"
+	<iostream>
+	<vector>
+
+1514245622 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\rating.cpp
+	"Rating.h"
+	<iostream>
+
+1514245611 d:\2ata\in204\projet cpp\cloned\recommendersystem\rating.h
+	<iostream>
+	<string>
+	<vector>
+
+1514242932 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\similarity.cpp
+	"Similarity.h"
+	<iostream>
+	<vector>
+	<math.h>
+
+1513807396 d:\2ata\in204\projet cpp\cloned\recommendersystem\similarity.h
+	<vector>
+	<iostream>
+
+1513882313 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\user.cpp
+	"User.h"
+	<iostream>
+	<vector>
+
+1513882318 d:\2ata\in204\projet cpp\cloned\recommendersystem\user.h
+	<iostream>
+	<string>
+	<vector>
+
+1514241000 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixmap.cpp
+	"MatrixMap.h"
+	<iostream>
+	<map>
+	<vector>
+
+1514240142 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixmap.h
+	<iostream>
+	<map>
+	<vector>
+	"Matrix.h"
+
+1514133073 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix.cpp
+	"Matrix.h"
+	<iostream>
+	<vector>
+

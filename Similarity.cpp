@@ -19,6 +19,10 @@ float Similarity::cos_similarity(vector<float> U1,vector<float> U2)
             b=b+(U1[i]-avg_U1)*(U1[i]-avg_U1);
             c=c+(U2[i]-avg_U2)*(U2[i]-avg_U2);
         }
+    }
+        /*cout << "a:" << a;
+        cout << "b:" << b;
+        cout << "c:" << c;*/
         b=sqrt(b);
         c=sqrt(c);
         float r;
@@ -28,5 +32,4 @@ float Similarity::cos_similarity(vector<float> U1,vector<float> U2)
             return r;
         }
         else return 0;
-    }
 }
