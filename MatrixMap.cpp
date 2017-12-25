@@ -3,14 +3,12 @@
 #include<map>
 #include<vector>
 using namespace std;
-MatrixMap::MatrixMap(int l, int c):Matrix(l,c){
-    dimRow=l;
-    dimCol=c;
+MatrixMap::MatrixMap(int rows, int columns):Matrix(rows,columns){
     int i,j;
-    for (i=0; i<l;i++){
-        for (j=0; j<c;j++){
+    for (i=0; i<rows;i++){
+        for (j=0; j<columns;j++){
             (data.at(i)).at(j)=0;
-        }    
+        }
     }
 }
 float MatrixMap::getEl(int i, int j)const{

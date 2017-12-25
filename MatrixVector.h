@@ -6,9 +6,7 @@ using namespace std;
 #include "Matrix.h"
 class MatrixVector:public Matrix //Matrice organisée en vector
 {
-    int dimCol;
-    int dimRow;
-    vector<float> data;    
+    vector<float> data;
 public:
     MatrixVector(int,int);
     ~MatrixVector();

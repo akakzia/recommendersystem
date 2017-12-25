@@ -7,8 +7,6 @@ using namespace std;
 #include "Matrix.h"
 class MatrixMap:public Matrix //Matrice organisée en map
 {
-    int dimCol;
-    int dimRow;
     map<int,vector<float> > data;
 public:
     MatrixMap(int,int);

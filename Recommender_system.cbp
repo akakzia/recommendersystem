@@ -34,10 +34,8 @@
 		</Compiler>
 		<Unit filename="Algorithm.h" />
 		<Unit filename="CoFilterAlgorithm.h" />
+		<Unit filename="Matrix.cpp" />
 		<Unit filename="Matrix.h" />
-		<Unit filename="Matrix2D.h" />
-		<Unit filename="MatrixMap.h" />
-		<Unit filename="MatrixVector.h" />
 		<Unit filename="Movie.cpp" />
 		<Unit filename="Movie.h" />
 		<Unit filename="Rating.cpp" />

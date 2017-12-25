@@ -8,10 +8,12 @@ class Matrix //Classe abstraite
 protected:
     int dimCol;
     int dimRow;
-    Matrix(int,int);
-    //Matrix();
+
 public:
-    virtual float getEl(int,int)const;
-    virtual void setEl(int,int,float);
+    Matrix(int,int);
+    //virtual float getEl(int,int)const ;
+    //virtual void setEl(int,int,float);
+    int getdimCol();
+    int getdimRow();
 };
 #endif

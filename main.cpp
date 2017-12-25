@@ -6,6 +6,10 @@
 #include "Rating.h"
 #include "Movie.h"
 #include "User.h"
+#include "Matrix.h"
+#include "Matrix2D.h"
+#include "MatrixMap.h"
+#include "MatrixVector.h"
 using namespace std;
 
 Rating *fill_rating();
@@ -14,8 +18,7 @@ User *fill_User();
 
 int main()
 {
-
-
+    /*
     //Movie function test
     Movie *M;
     M=fill_movies();
@@ -28,6 +31,7 @@ int main()
     User *U;
     U=fill_User();
     cout<<U[2113].getId()<<endl;
+    */
     return 0;
 }
 

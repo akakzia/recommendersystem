@@ -8,10 +8,8 @@ using namespace std;
 
 class Matrix2D:public Matrix {
 private:
-    int* m_ptValues;
-    int m_totalSize;
-    int dimCol;
-    int dimRow;
+    float** data;
+    int totalSize;
 public:
     Matrix2D(int,int); // base ctor.
     ~Matrix2D(); // dtor.

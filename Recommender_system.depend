@@ -24,7 +24,7 @@
 	<iostream>
 	<vector>
 
-1514228238 source:c:\users\bader\desktop\recommendersystem\main.cpp
+1514237427 source:c:\users\bader\desktop\recommendersystem\main.cpp
 	<iostream>
 	<vector>
 	<fstream>
@@ -32,6 +32,11 @@
 	<sstream>
 	"Rating.h"
 	"Movie.h"
+	"User.h"
+	"Matrix.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
+	"MatrixVector.h"
 
 1514148754 c:\users\bader\desktop\recommendersystem\rating.h
 	<iostream>
@@ -43,36 +48,36 @@
 	<string>
 	<vector>
 
-1514141409 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
+1514235247 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
 	"Matrix2D.h"
 	<iostream>
 
-1514141078 c:\users\bader\desktop\recommendersystem\matrix2d.h
+1514235159 c:\users\bader\desktop\recommendersystem\matrix2d.h
 	<iostream>
 	"Matrix.h"
 
-1514140977 c:\users\bader\desktop\recommendersystem\matrix.h
+1514235576 c:\users\bader\desktop\recommendersystem\matrix.h
 	<iostream>
 	<vector>
 
-1514016097 source:c:\users\bader\desktop\recommendersystem\matrixmap.cpp
+1514233043 source:c:\users\bader\desktop\recommendersystem\matrixmap.cpp
 	"MatrixMap.h"
 	<iostream>
 	<map>
 	<vector>
 
-1514139458 c:\users\bader\desktop\recommendersystem\matrixmap.h
+1514231016 c:\users\bader\desktop\recommendersystem\matrixmap.h
 	<iostream>
 	<map>
 	<vector>
 	"Matrix.h"
 
-1514014645 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
+1514233020 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
 	"MatrixVector.h"
 	<iostream>
 	<vector>
 
-1514014645 c:\users\bader\desktop\recommendersystem\matrixvector.h
+1514231016 c:\users\bader\desktop\recommendersystem\matrixvector.h
 	<iostream>
 	<vector>
 	"Matrix.h"
@@ -106,4 +111,7 @@
 	<string>
 	<vector>
 	"Rating.h"
+
+1514234199 source:c:\users\bader\desktop\recommendersystem\matrix.cpp
+	"Matrix.h"
 
