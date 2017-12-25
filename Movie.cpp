@@ -41,3 +41,6 @@ void Movie::getAvg(){
     ratings[0]=sum/j;
 }
 
+void Movie::setRatings(vector<float> ratings_vector){
+    ratings = ratings_vector;
+};

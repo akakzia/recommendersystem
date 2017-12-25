@@ -19,5 +19,6 @@ public:
     int getId()const;
     vector<float> getRating()const;
     void getAvg();
+    void setRatings(vector<float>);
 };
 #endif

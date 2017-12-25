@@ -4,6 +4,8 @@
 using namespace std;
 #include<string>
 #include<vector>
+#include "Rating.h"
+
 class User
 {
     int id;
@@ -15,5 +17,6 @@ public:
     //void addRating(float);
     vector<float> getRatings()const;
     void getAvg();
+    void setRatings(vector<float>);
 };
 #endif

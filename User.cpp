@@ -27,3 +27,7 @@ void User::getAvg(){
     }
     ratings[0]=sum/j;
 }
+
+void User::setRatings(vector<float> ratings_vector){
+    ratings = ratings_vector;
+};
