@@ -2,7 +2,10 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-Matrix::Matrix(int l,int c):dimCol(c),dimRow(l){}
+Matrix::Matrix(int rows ,int columns){
+    dimCol = columns;
+    dimRow = rows ;
+}
 
 float Matrix::getEl(int i,int j)const
 {
@@ -13,3 +16,10 @@ void Matrix::setEl(int i,int j,float e)
 }
 Matrix::Matrix(){}
 
+
+int Matrix::getdimCol(){
+    return dimCol;
+}
+int Matrix::getdimRow(){
+    return dimRow;
+}
