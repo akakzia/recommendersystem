@@ -11,6 +11,7 @@ class Rating
     int idMovie;
 public:
     Rating(float rate,int idUser,int idMovie);
+    Rating();
     float getRate()const;
     int getIdUser()const;
     int getIdMovie()const;

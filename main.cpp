@@ -10,6 +10,7 @@
 #include "Matrix2D.h"
 #include "MatrixMap.h"
 #include "MatrixVector.h"
+#include "Similarity.h"
 using namespace std;
 
 Rating *fill_rating();
@@ -18,20 +19,41 @@ User *fill_User();
 
 int main()
 {
-    /*
+    // Test similarity
+    /*User U1(1);
+    User U2(2);
+    MatrixMap mm(2,2);
+    mm.setEl(0,0,1.0);
+    mm.setEl(1,0,9.0);
+    mm.setEl(0,1,3.0);
+    mm.setEl(1,1,7.0);
+    for (int i=0; i<mm.getdimRow();i++){
+        for (int j=0; j<mm.getdimCol();j++){
+            cout << mm.getEl(i,j);
+        }
+        cout << "\n";
+    }
+    U1.assignRatings(mm.getRow(0));
+    U1.getAvg();
+    U2.assignRatings(mm.getRow(1));
+    U2.getAvg();
+    Similarity S;
+    cout << S.cos_similarity(U1.getRatings(), U2.getRatings());
+    */
+
     //Movie function test
     Movie *M;
     M=fill_movies();
     cout<<M[10197].getId()<<" "<<M[10197].getTitle()<<endl;
     //Rating function test
-    Rating *R;
+    /*Rating *R;
     R=fill_rating();
-    cout<<R[855598].getIdUser()<<" "<<R[855598].getIdMovie()<<" "<<R[855598].getRate()<<endl;
+    cout<<R[855598].getIdUser()<<" "<<R[855598].getIdMovie()<<" "<<R[855598].getRate()<<endl;*/
     //User function test
-    User *U;
+    /*User *U;
     U=fill_User();
-    cout<<U[2113].getId()<<endl;
-    */
+    cout<<U[2113].getId()<<endl;*/
+
     return 0;
 }
 
@@ -70,7 +92,7 @@ Movie  *fill_movies(){ //create set of all movies
     ifstream in_stream;
     int loop=0;
     string line;
-    float id;
+    int id;
     string title;
     static Movie M[10197];
 
@@ -94,7 +116,6 @@ Movie  *fill_movies(){ //create set of all movies
 		in_stream.close(); //Closes the file
     return M;
 }
-
 User *fill_User(){ //creat set of all moies
 
     ifstream in_stream;

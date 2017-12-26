@@ -16,5 +16,6 @@ public:
     virtual void setEl(int,int,float);
     int getdimCol();
     int getdimRow();
+    virtual vector<float> getRow(int);
 };
 #endif

@@ -6,6 +6,7 @@ Rating::Rating(float r,int iU,int iM){
     idUser=iU;
     idMovie=iM;
 }
+Rating::Rating(){}
 float Rating::getRate()const{
     return rate;
 }

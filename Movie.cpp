@@ -2,19 +2,18 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-Movie::Movie(int i,string t,string r,string u)
+Movie::Movie(int i,string t)
 {
     id=i;
     title=t;
-    releaseDate=r;
-    URL=u;
     ratings.push_back(0);
 }
+Movie::Movie(){}
 void Movie::addRating(float r)
 {
     ratings.push_back(r);
 }
-vector<float> Movie::getRating()const
+vector<float> Movie::getRatings()const
 {
     return ratings;
 }
@@ -35,4 +34,8 @@ void Movie::getAvg(){
     }
     ratings[0]=sum/j;
 }
+int Movie::getId()const{
+    return id;
+}
+
 

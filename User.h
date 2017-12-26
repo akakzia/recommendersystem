@@ -7,13 +7,14 @@ using namespace std;
 class User
 {
     int id;
-    int age;
-    string occupation;
     vector<float> ratings;
 public:
-    User(int id,int age,string occupation);
+    User(int id);
+    User();
     void addRating(float);
     vector<float> getRatings()const;
     void getAvg();
+    void assignRatings(vector<float>);
+    int getId()const;
 };
 #endif

@@ -2,12 +2,11 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-User::User(int i,int a,string occ){
+User::User(int i){
     id=i;
-    age=a;
-    occupation=occ;
     ratings.push_back(0.0);
 }
+User::User(){}
 void User::addRating(float r){
     ratings.push_back(r);
 }
@@ -26,4 +25,10 @@ void User::getAvg(){
         i++;
     }
     ratings[0]=sum/j;
+}
+void User::assignRatings(vector<float> r){
+    ratings=r;
+}
+int User::getId()const{
+    return id;
 }

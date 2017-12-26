@@ -13,5 +13,6 @@ public:
     MatrixMap(int,int);
     float getEl(int,int)const;
     void setEl(int,int,float);
+    vector<float> getRow(int);
 };
 #endif

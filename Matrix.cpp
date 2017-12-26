@@ -23,3 +23,6 @@ int Matrix::getdimCol(){
 int Matrix::getdimRow(){
     return dimRow;
 }
+vector<float> Matrix::getRow(int i)
+{
+}

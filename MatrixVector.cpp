@@ -4,10 +4,7 @@
 using namespace std;
 MatrixVector::MatrixVector(int l,int c):Matrix(l,c)
 {
-    dimRow=l;
-    dimCol=c;
-    int i;
-    for (i=0; i<dimRow*dimCol; i++)
+    for (int i=0; i<l*c; i++)
     {
         data.push_back(0);
     }
