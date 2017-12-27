@@ -22,11 +22,6 @@ map<int,int> H_users_id;
 
 int main()
 {
-
-
-
-
-
     // Test similarity
     /*
     User U1(1);
