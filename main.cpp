@@ -17,10 +17,19 @@ Rating *fill_rating();
 Movie  *fill_movies();
 User *fill_User();
 
+map<int,int> H_movies_id;
+map<int,int> H_users_id;
+
 int main()
 {
+
+
+
+
+
     // Test similarity
-    /*User U1(1);
+    /*
+    User U1(1);
     User U2(2);
     MatrixMap mm(2,2);
     mm.setEl(0,0,1.0);
@@ -40,20 +49,22 @@ int main()
     Similarity S;
     cout << S.cos_similarity(U1.getRatings(), U2.getRatings());
     */
-
+    /*
     //Movie function test
     Movie *M;
     M=fill_movies();
-    cout<<M[10197].getId()<<" "<<M[10197].getTitle()<<endl;
+    cout<<M[10196].getId()<<" "<<M[10196].getTitle()<<endl;
+    cout<<H_movies_id[6323]<<endl;
     //Rating function test
-    /*Rating *R;
+    Rating *R;
     R=fill_rating();
-    cout<<R[855598].getIdUser()<<" "<<R[855598].getIdMovie()<<" "<<R[855598].getRate()<<endl;*/
+    cout<<R[855597].getIdUser()<<" "<<R[855597].getIdMovie()<<" "<<R[855597].getRate()<<endl;
     //User function test
-    /*User *U;
+    User *U;
     U=fill_User();
-    cout<<U[2113].getId()<<endl;*/
-
+    cout<<U[2112].getId()<<endl;
+    cout<<H_users_id[267]<<endl;
+    */
     return 0;
 }
 
@@ -111,6 +122,7 @@ Movie  *fill_movies(){ //create set of all movies
 			std::istringstream iss(line); //get numbers in the line
             iss>>id>>title;
             M[loop] = Movie(id,title);
+            H_movies_id.insert(pair <int,int> (id,loop));
 			loop++; //Does an increment to the variable 'loop'
 		}
 		in_stream.close(); //Closes the file
@@ -138,9 +150,12 @@ User *fill_User(){ //creat set of all moies
             getline(in_stream,line);//Gets a single line from file
 			std::istringstream iss(line); //get numbers in the line
             iss >>userid;
-            if (userid!=U[loop2].getId()){
-            loop2++;
+            if (userid!=U[loop2-1].getId()){
+
             U[loop2] =User(userid);
+            H_users_id.insert(pair <int,int> (userid,loop2));
+            loop2++;
+
             }
 			loop++; //Does an increment to the variable 'loop'
 		}
