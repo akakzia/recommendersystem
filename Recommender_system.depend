@@ -117,3 +117,96 @@
 	"Matrix2D.h"
 	<iostream>
 
+1514293250 source:c:\users\bader\desktop\recommendersystem\matrix.cpp
+	"Matrix.h"
+	<iostream>
+	<vector>
+
+1514405328 c:\users\bader\desktop\recommendersystem\matrix.h
+	<iostream>
+	<vector>
+
+1514293250 source:c:\users\bader\desktop\recommendersystem\matrixmap.cpp
+	"MatrixMap.h"
+	<iostream>
+	<map>
+	<vector>
+
+1514293250 c:\users\bader\desktop\recommendersystem\matrixmap.h
+	<iostream>
+	<map>
+	<vector>
+	"Matrix.h"
+
+1514293250 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
+	"MatrixVector.h"
+	<iostream>
+	<vector>
+
+1514290928 c:\users\bader\desktop\recommendersystem\matrixvector.h
+	<iostream>
+	<vector>
+	"Matrix.h"
+
+1514293251 source:c:\users\bader\desktop\recommendersystem\rating.cpp
+	"Rating.h"
+	<iostream>
+
+1514293251 c:\users\bader\desktop\recommendersystem\rating.h
+	<iostream>
+	<string>
+	<vector>
+
+1514290928 source:c:\users\bader\desktop\recommendersystem\similarity.cpp
+	"Similarity.h"
+	<iostream>
+	<vector>
+	<math.h>
+
+1514014645 c:\users\bader\desktop\recommendersystem\similarity.h
+	<vector>
+	<iostream>
+
+1514293251 source:c:\users\bader\desktop\recommendersystem\user.cpp
+	"User.h"
+	<iostream>
+	<vector>
+
+1514293251 c:\users\bader\desktop\recommendersystem\user.h
+	<iostream>
+	<string>
+	<vector>
+
+1514294549 source:c:\users\bader\desktop\recommendersystem\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	"Rating.h"
+	"Movie.h"
+	"User.h"
+	"Matrix.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
+	"MatrixVector.h"
+	"Similarity.h"
+
+1514293251 c:\users\bader\desktop\recommendersystem\movie.h
+	<iostream>
+	<string>
+	<vector>
+
+1514235159 c:\users\bader\desktop\recommendersystem\matrix2d.h
+	<iostream>
+	"Matrix.h"
+
+1514235247 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
+	"Matrix2D.h"
+	<iostream>
+
+1514294545 source:c:\users\bader\desktop\recommendersystem\movie.cpp
+	"Movie.h"
+	<iostream>
+	<vector>
+
