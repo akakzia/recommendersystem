@@ -7,15 +7,18 @@ using namespace std;
 class Movie
 {
     int id;
+    int hId;
     string title;
     vector<float> ratings;
 public:
     Movie(int id,string title);
+    Movie (int,int,string);
     Movie();
     void addRating(float);
     string getTitle()const;
     vector<float> getRatings()const;
     void getAvg();
     int getId()const;
+    int gethId()const;
 };
 #endif

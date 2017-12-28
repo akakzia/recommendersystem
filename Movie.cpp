@@ -8,6 +8,13 @@ Movie::Movie(int i,string t)
     title=t;
     ratings.push_back(0);
 }
+Movie::Movie(int i,int h, string t)
+{
+    id=i;
+    hId=h;
+    title=t;
+    ratings.push_back(0);
+}
 Movie::Movie(){}
 void Movie::addRating(float r)
 {
@@ -36,6 +43,9 @@ void Movie::getAvg(){
 }
 int Movie::getId()const{
     return id;
+}
+int Movie::gethId()const{
+    return hId;
 }
 
 

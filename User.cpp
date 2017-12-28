@@ -6,6 +6,11 @@ User::User(int i){
     id=i;
     ratings.push_back(0.0);
 }
+User::User(int i, int h){
+    id=i;
+    hId=h;
+    ratings.push_back(0.0);
+}
 User::User(){}
 void User::addRating(float r){
     ratings.push_back(r);
@@ -31,4 +36,7 @@ void User::assignRatings(vector<float> r){
 }
 int User::getId()const{
     return id;
+}
+int User::gethId()const{
+    return hId;
 }

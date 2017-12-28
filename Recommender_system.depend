@@ -24,12 +24,9 @@
 	<iostream>
 	<vector>
 
-1514288428 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\main.cpp
+1514451066 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\main.cpp
 	<iostream>
 	<vector>
-	<fstream>
-	<cstdlib>
-	<sstream>
 	"Rating.h"
 	"Movie.h"
 	"User.h"
@@ -38,8 +35,9 @@
 	"MatrixMap.h"
 	"MatrixVector.h"
 	"Similarity.h"
+	"functions.h"
 
-1514287911 d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.h
+1514448151 d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.h
 	<iostream>
 	<string>
 	<vector>
@@ -58,7 +56,7 @@
 	<iostream>
 	<vector>
 
-1514287926 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.cpp
+1514448166 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.cpp
 	"Movie.h"
 	<iostream>
 	<vector>
@@ -82,12 +80,12 @@
 	<vector>
 	<iostream>
 
-1514288714 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\user.cpp
+1514447793 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\user.cpp
 	"User.h"
 	<iostream>
 	<vector>
 
-1514288703 d:\2ata\in204\projet cpp\cloned\recommendersystem\user.h
+1514447771 d:\2ata\in204\projet cpp\cloned\recommendersystem\user.h
 	<iostream>
 	<string>
 	<vector>
@@ -115,5 +113,20 @@
 
 1514246329 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix2d.cpp
 	"Matrix2D.h"
+	<iostream>
+
+1514451320 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.cpp
+	<string>
+	<map>
+	<iostream>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+	"MatrixVector.h"
+	<fstream>
+	<cstdlib>
+	<sstream>
+
+1514451286 d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.h
 	<iostream>
 
