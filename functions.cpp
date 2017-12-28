@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <sstream>
 //Load Movies in Map : used .csv instead of .dat faster access to data
+
 map<int,Movie> loadMovies(){
     map<int,Movie> M;
     std::ifstream file("data/movies.csv");
@@ -107,99 +108,4 @@ MatrixVector learning(map<int,Movie> M, map<int,User> U){ //Fills the matrix dir
 		return P;
 }
 
-
-//Temchi to93ed 15
-Rating *fill_rating(){ //create set of all ratings
-
-    ifstream in_stream;
-    int loop=0;
-    string line;
-    float rate,movieid,userid;
-    static Rating R[855598];
-
-    //Open input file.
-    in_stream.open("data/user_ratedmovies-timestamps.dat");
-
-    if (in_stream.fail())
-    {
-        cout << "Input file opening failed";
-        exit(1);
-    }
-    getline(in_stream,line);
-    while (! in_stream.eof() ) //Runs while the file is NOT at the end
-		{
-            getline(in_stream,line);//Gets a single line from file
-			std::istringstream iss(line); //get numbers in the line
-            iss >>userid>>movieid>>rate;
-            R[loop] =Rating(rate,userid,movieid);
-			loop++; //Does an increment to the variable 'loop'
-		}
-		in_stream.close(); //Closes the file
-    return R;
-}
-// Temchi
-Movie  *fill_movies(){ //create set of all movies
-
-    ifstream in_stream;
-    int loop=0;
-    string line;
-    int id;
-    string title;
-    static Movie M[10197];
-
-    //Open input file.
-    in_stream.open("data/movies.dat");
-
-    if (in_stream.fail())
-    {
-        cout << "Input file opening failed";
-        exit(1);
-    }
-    getline(in_stream,line);
-    while (! in_stream.eof() ) //Runs while the file is NOT at the end
-		{
-            getline(in_stream,line);//Gets a single line from file
-			std::istringstream iss(line); //get numbers in the line
-            iss>>id>>title;
-            M[loop] = Movie(id,title);
-            H_movies_id.insert(pair <int,int> (id,loop));
-			loop++; //Does an increment to the variable 'loop'
-		}
-		in_stream.close(); //Closes the file
-    return M;
-}
-User *fill_User(){ //creat set of all moies
-
-    ifstream in_stream;
-    int loop=0,loop2=0;
-    string line;
-    float userid;
-    static User U[2113];
-
-    //Open input file.
-    in_stream.open("data/user_ratedmovies-timestamps.dat");
-
-    if (in_stream.fail())
-    {
-        cout << "Input file opening failed";
-        exit(1);
-    }
-    getline(in_stream,line);
-    while (! in_stream.eof() ) //Runs while the file is NOT at the end
-		{
-            getline(in_stream,line);//Gets a single line from file
-			std::istringstream iss(line); //get numbers in the line
-            iss >>userid;
-            if (userid!=U[loop2-1].getId()){
-
-            U[loop2] =User(userid);
-            H_users_id.insert(pair <int,int> (userid,loop2));
-            loop2++;
-
-            }
-			loop++; //Does an increment to the variable 'loop'
-		}
-		in_stream.close(); //Closes the file
-    return U;
-}
 
