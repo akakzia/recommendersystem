@@ -162,7 +162,7 @@ Movie  *fill_movies(){ //create set of all movies
 			std::istringstream iss(line); //get numbers in the line
             iss>>id>>title;
             M[loop] = Movie(id,title);
-            cout << title << "\n";
+            H_movies_id.insert(pair <int,int> (id,loop));
 			loop++; //Does an increment to the variable 'loop'
 		}
 		in_stream.close(); //Closes the file
@@ -177,7 +177,7 @@ User *fill_User(){ //creat set of all moies
     static User U[2113];
 
     //Open input file.
-    in_stream.open("data/user_taggedmovies.dat");
+    in_stream.open("data/user_ratedmovies-timestamps.dat");
 
     if (in_stream.fail())
     {
@@ -190,9 +190,12 @@ User *fill_User(){ //creat set of all moies
             getline(in_stream,line);//Gets a single line from file
 			std::istringstream iss(line); //get numbers in the line
             iss >>userid;
-            if (userid!=U[loop2].getId()){
-            loop2++;
+            if (userid!=U[loop2-1].getId()){
+
             U[loop2] =User(userid);
+            H_users_id.insert(pair <int,int> (userid,loop2));
+            loop2++;
+
             }
 			loop++; //Does an increment to the variable 'loop'
 		}

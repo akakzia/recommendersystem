@@ -13,18 +13,22 @@ using namespace std;
 
 int main()
 {
+    /*
     //Movie function test
-    /*Movie *M;
-    M=test();
-    cout<<M[10197].getId()<<" "<<M[10197].getTitle()<<endl;*/
+    Movie *M;
+    M=fill_movies();
+    cout<<M[10196].getId()<<" "<<M[10196].getTitle()<<endl;
+    cout<<H_movies_id[6323]<<endl;
     //Rating function test
-    /*Rating *R;
+    Rating *R;
     R=fill_rating();
-    cout<<R[855598].getIdUser()<<" "<<R[855598].getIdMovie()<<" "<<R[855598].getRate()<<endl;*/
+    cout<<R[855597].getIdUser()<<" "<<R[855597].getIdMovie()<<" "<<R[855597].getRate()<<endl;
     //User function test
-    /*User *U;
+    User *U;
     U=fill_User();
-    cout<<U[2113].getId()<<endl;*/
+    cout<<U[2112].getId()<<endl;
+    cout<<H_users_id[267]<<endl;
+    */
     //Load Movies in map
     /*map<int,Movie> allMovies;
     allMovies=loadMovies();*/
