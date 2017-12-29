@@ -24,3 +24,10 @@ vector<float> MatrixVector::getColumn(int j){
     }
     return c;
 }
+vector<float> MatrixVector::getRow(int i){
+    vector<float> l;
+    for (int j=0; j<dimCol; j++){
+        l.push_back(this->getEl(i,j));
+    }
+    return l;
+}

@@ -135,3 +135,111 @@ float predictRate(map<int,User> U, map<int,float> c,int m, int v){
     }
         return num/denom;
 }
+float predictRate(map<int,Movie> U, map<int,float> c,int m, int v){
+    map<int,float> neigh=getNeighbors(c, v);
+    float num=0;
+    float denom=0;
+    std::map<int,float>::iterator it;
+    for (it=neigh.begin(); it!=neigh.end(); ++it){
+        num=num + it->second*U[it->first].getRatings()[m];
+        denom=denom + it->second;
+    }
+        return num/denom;
+}
+
+void CFuser(map<int,User> allUsers,map<int,Movie> allMovies,MatrixVector U){
+    int a=0;
+    int index=allUsers[a].gethId();
+    while ((index > 2113) or (index < 1)){
+        cout << "Enter the id of the user you want to recommend to : ";
+        cin >> a;
+        index=allUsers[a].gethId();
+    }
+    allUsers[a].assignRatings(U.getColumn(index));
+    allUsers[a].getAvg();
+    vector<float> c=allUsers[a].getRatings();
+    int mo;
+    int indexm=0;
+    while (((indexm > 10197) or (indexm < 1))or(c[indexm]!=0)){
+        cout << "Enter the id of the movie to predict (Not seen before) : ";
+        cin >> mo;
+        indexm=allMovies[mo].gethId();
+    }
+    //Calculate correlation with all the users
+    map<int,float> correlation;
+    int loop=1;
+    Similarity S;
+    for (std::map<int,User>::iterator it=allUsers.begin(); it!=allUsers.end(); ++it){
+            if ((it->first)!=a){
+                it->second.assignRatings(U.getColumn(loop));
+                if (it->second.getRatings()[indexm]!=0){//if movie watched
+                    it->second.getAvg();
+                    vector<float> d=it->second.getRatings();
+                    correlation.insert(std::pair<int,float>(it->first,S.cos_similarity(c,d)));
+                }
+                loop++;
+            }
+    }
+    cout << correlation.size() << " Users have already watched this movie ! \n";
+    //Handling neighborhood
+    int N;
+    cout << "Select the size of your neighborhood : ";
+    cin >> N;
+    //Predict the rate
+    float e=predictRate(allUsers, correlation,indexm, N);
+    cout << "The predicted rate for " << allMovies[mo].getTitle() << " is : " << e << "\n";
+    if (e>3.5)
+        cout << allMovies[mo].getTitle() <<" is HIGHLY recommended for the user !";
+    else if (e>2.5)
+        cout << allMovies[mo].getTitle() << " is recommended for the user !";
+    else
+        cout << allMovies[mo].getTitle() << " is NOT recommended for the user !";
+}
+void CFmovie(map<int,User> allUsers,map<int,Movie> allMovies,MatrixVector U){
+    int a=0;
+    int index=allUsers[a].gethId();
+    int mo;
+    int indexm=0;
+    while ((indexm > 10197) or (indexm < 1)){
+        cout << "Enter the id of the movie to predict : ";
+        cin >> mo;
+        indexm=allMovies[mo].gethId();
+    }
+    allMovies[mo].assignRatings(U.getRow(indexm));
+    allMovies[mo].getAvg();
+    vector<float> c=allMovies[mo].getRatings();
+    while (((index > 2113)or(index < 1))or(c[index]!=0)){
+        cout << "Enter the id of the user you want to recommend to (Not have seen the movie) : ";
+        cin >> a;
+        index=allUsers[a].gethId();
+    }
+    //Calculate correlation with all the movies
+    map<int,float> correlation;
+    int loop=1;
+    Similarity S;
+    for (std::map<int,Movie>::iterator it=allMovies.begin(); it!=allMovies.end(); ++it){
+            if ((it->first)!=mo){
+                it->second.assignRatings(U.getRow(loop));
+                if (it->second.getRatings()[index]!=0){//if movie watched
+                    it->second.getAvg();
+                    vector<float> d=it->second.getRatings();
+                    correlation.insert(std::pair<int,float>(it->first,S.cos_similarity(c,d)));
+                }
+                loop++;
+            }
+    }
+    cout << correlation.size() << " Movies have been watched by this user ! \n";
+    //Handling neighborhood
+    int N;
+    cout << "Select the size of your neighborhood : ";
+    cin >> N;
+    //Predict the rate
+    float e=predictRate(allMovies, correlation,index, N);
+    cout << "The predicted rate for " << allMovies[mo].getTitle() << " is : " << e << "\n";
+    if (e>3.5)
+        cout << allMovies[mo].getTitle() <<" is HIGHLY recommended for the user !";
+    else if (e>2.5)
+        cout << allMovies[mo].getTitle() << " is recommended for the user !";
+    else
+        cout << allMovies[mo].getTitle() << " is NOT recommended for the user !";
+}

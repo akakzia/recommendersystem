@@ -39,13 +39,19 @@ void Movie::getAvg(){
         }
         i++;
     }
-    ratings[0]=sum/j;
+    if (sum!=0)
+        ratings[0]=sum/j;
+    else
+        ratings[0]=0;
 }
 int Movie::getId()const{
     return id;
 }
 int Movie::gethId()const{
     return hId;
+}
+void Movie::assignRatings(vector<float> r){
+    ratings=r;
 }
 
 

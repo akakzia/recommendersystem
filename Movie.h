@@ -17,6 +17,7 @@ public:
     void addRating(float);
     string getTitle()const;
     vector<float> getRatings()const;
+    void assignRatings(vector<float>);
     void getAvg();
     int getId()const;
     int gethId()const;
