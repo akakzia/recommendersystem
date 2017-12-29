@@ -17,3 +17,10 @@ void MatrixVector::setEl(int i,int j,float e)
 {
     data.at(i*dimCol+j)=e;
 }
+vector<float> MatrixVector::getColumn(int j){
+    vector<float> c;
+    for (int i=0; i<dimRow; i++){
+        c.push_back(this->getEl(i,j));
+    }
+    return c;
+}

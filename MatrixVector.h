@@ -11,5 +11,6 @@ public:
     MatrixVector(int,int);
     float getEl(int,int)const;
     void setEl(int,int,float);
+    vector<float> getColumn(int);
 };
 #endif

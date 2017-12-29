@@ -4,6 +4,7 @@
 #include"Movie.h"
 #include"Rating.h"
 #include"User.h"
+#include"Similarity.h"
 #include"MatrixVector.h"
 #include <fstream>
 #include <cstdlib>
@@ -82,7 +83,7 @@ MatrixVector learning(map<int,Movie> M, map<int,User> U){ //Fills the matrix dir
     string line;
     float rate;
     int movieid,userid;
-    MatrixVector P(2114,10198);
+    MatrixVector P(10198,2114);
     static Rating R[855598];
     cout << "Learning in progress ..." << "\n";
     //Open input file.
@@ -99,13 +100,38 @@ MatrixVector learning(map<int,Movie> M, map<int,User> U){ //Fills the matrix dir
             getline(in_stream,line);//Gets a single line from file
 			std::istringstream iss(line); //get numbers in the line
             iss >>userid>>movieid>>rate;
-            P.setEl(U[userid].gethId(), M[movieid].gethId(),rate);
-            M[movieid].addRating(rate);
-            U[userid].addRating(rate);//Will be used to calculate average later on
+            P.setEl(M[movieid].gethId(),U[userid].gethId(),rate);
+            //M[movieid].addRating(rate);
+            //U[userid].addRating(rate);//Will be used to calculate average later on
 		}
 		in_stream.close(); //Closes the file
 		cout << "Learning completed. Utility Matrix is ready for predict." << "\n";
 		return P;
 }
-
-
+map<int, float> getNeighbors(map<int, float> mymap, int N){
+    map<int,float> temp=mymap;
+    map<int,float> res;
+    int maximum;
+    for (int i=0;i<N;i++){
+        maximum=0;
+        for (std::map<int,float>::iterator it=temp.begin(); it!=temp.end(); ++it){
+            if (it->second > temp[maximum]){
+                maximum=it->first;
+            }
+        }
+        res.insert(std::pair<int,float>(maximum,temp[maximum]));
+        temp.erase(maximum);
+    }
+    return res;
+}
+float predictRate(map<int,User> U, map<int,float> c,int m, int v){
+    map<int,float> neigh=getNeighbors(c, v);
+    float num=0;
+    float denom=0;
+    std::map<int,float>::iterator it;
+    for (it=neigh.begin(); it!=neigh.end(); ++it){
+        num=num + it->second*U[it->first].getRatings()[m];
+        denom=denom + it->second;
+    }
+        return num/denom;
+}

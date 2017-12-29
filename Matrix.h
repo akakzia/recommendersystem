@@ -14,6 +14,7 @@ protected:
 public:
     virtual float getEl(int,int)const;
     virtual void setEl(int,int,float);
+    virtual vector<float> getColumn(int);
     int getdimCol();
     int getdimRow();
     virtual vector<float> getRow(int);
