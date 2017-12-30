@@ -1,6 +1,9 @@
 #include"User.h"
 #include<iostream>
 #include<vector>
+#include <numeric>
+#include <functional>
+
 using namespace std;
 User::User(int i){
     id=i;
@@ -19,9 +22,13 @@ vector<float> User::getRatings()const{
     return ratings;
 }
 void User::getAvg(){
+
+    //float avg = accumulate( ratings.begin(), ratings.end(), 0.0)/(ratings.size()-1);
+    //ratings[0] = avg;
+
     int i=1;
     int j=0;
-    float sum;
+    float sum=0;
     while (i<ratings.size()){
         if (ratings.at(i)!=0){
             j++;
@@ -30,6 +37,7 @@ void User::getAvg(){
         i++;
     }
     ratings[0]=sum/j;
+
 }
 void User::assignRatings(vector<float> r){
     ratings=r;
