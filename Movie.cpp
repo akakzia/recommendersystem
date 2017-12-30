@@ -31,7 +31,7 @@ string Movie::getTitle()const
 void Movie::getAvg(){
     int i=1;
     int j=0;
-    float sum;
+    float sum=0;
     while (i<ratings.size()){
         if (ratings.at(i)!=0){
             j++;

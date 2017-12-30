@@ -22,6 +22,10 @@ int main()
     int m = allMovies.size();
     MatrixVector U(n+1,m+1);
     U=learning_Vector(allMovies,allUsers);
+    //Matrix2D U(n+1,m+1);
+    //U=learning_2D(allMovies,allUsers);
+    //MatrixVector S(n,m);
+    //S=Similarity_Vector(U);
     int method=-1;
     cout << "Select the method :\n1/Collaborative Filtering user-user\n2/Collaborative filtering movie-movie\n";
     while ((method!=1)and(method!=2)){cin >> method;}

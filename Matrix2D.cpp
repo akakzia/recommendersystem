@@ -28,7 +28,7 @@ float Matrix2D::getEl(int i, int j)const{
 vector<float> Matrix2D::getColumn(int c){
     vector<float> column;
     for(int i=0;i<dimRow;i++){
-        column.push_back(data[i][c]);
+        column.push_back(this->getEl(i,c));
     }
     return column;
 }

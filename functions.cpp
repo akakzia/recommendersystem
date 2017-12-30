@@ -255,32 +255,26 @@ void CFmovie(map<int,User> allUsers,map<int,Movie> allMovies,MatrixVector U){
         cout << allMovies[movie].getTitle() << " is NOT recommended for the user !";
 }
 
-
-
-
-
-
-
-
-/*
 MatrixVector Similarity_Vector(MatrixVector U){
-    MatrixVector S(U.getdimCol(),U.getdimCol());
+
+    cout<<"calculating similarity..."<<endl;
+    MatrixVector S(U.getdimCol()-1,U.getdimCol()-1);
+    for(int i=1;i<U.dimCol;i++){
+        int size_= 0;
+        float sum = 0;
+        vector <float> a=U.getColumn(i);
+        for (std::vector<float>::iterator it=a.begin(); it!=a.end(); ++it){
+            (*it!=0)?size_++:0;
+            sum+=*it;
+        }
+        U.setEl(0,i,sum/size_);
+    }
     for(int i=0;i<S.getdimCol();i++){
-            cout<<"user ="<<i<<endl;
-            vector<float> user_i=U.getColumn(i);
-            float avg_i = accumulate( user_i.begin(), user_i.end(), 0.0)/user_i.size();
-            for(std::vector<float>::iterator it = user_i.begin(); it != user_i.end(); ++it) {
-                *it=(*it!=0)?*it-avg_i:*it;
-            }
-        for (int j=0; j<S.getdimCol();j++){
-            vector<float> user_j=U.getColumn(j);
-            float avg_j = accumulate( user_j.begin(), user_j.end(), 0.0)/user_j.size();
-            for(std::vector<float>::iterator it = user_j.begin(); it != user_j.end(); ++it) {
-                *it= (*it!=0)?*it-avg_j:*it;
-            }
-            S.setEl(i,j,cos_similarity(user_i,user_j));
+        cout<<"i="<<i<<endl;
+        for(int j=1;j<S.getdimCol();j++){
+            S.setEl(i,j,cos_similarity(U.getColumn(i+1),U.getColumn(j+1)));
         }
     }
+    cout<<"silimarity calculated!"<<endl;
     return S;
 }
-*/

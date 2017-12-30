@@ -134,7 +134,7 @@
 1514589329 d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.h
 	<iostream>
 
-1514638370 source:c:\users\bader\desktop\recommendersystem\functions.cpp
+1514642939 source:c:\users\bader\desktop\recommendersystem\functions.cpp
 	<iostream>
 	<fstream>
 	<cstdlib>
@@ -176,7 +176,7 @@
 1514627522 c:\users\bader\desktop\recommendersystem\matrix.h
 	<vector>
 
-1514637371 source:c:\users\bader\desktop\recommendersystem\main.cpp
+1514642964 source:c:\users\bader\desktop\recommendersystem\main.cpp
 	"Rating.h"
 	"Movie.h"
 	"User.h"
@@ -197,7 +197,7 @@
 	<vector>
 	"Matrix.h"
 
-1514634160 c:\users\bader\desktop\recommendersystem\functions.h
+1514642958 c:\users\bader\desktop\recommendersystem\functions.h
 	<iostream>
 
 1514578182 source:c:\users\bader\desktop\recommendersystem\matrix.cpp
@@ -205,7 +205,7 @@
 	<iostream>
 	<vector>
 
-1514629605 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
+1514643085 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
 	"Matrix2D.h"
 	<iostream>
 
@@ -215,7 +215,7 @@
 	<map>
 	<vector>
 
-1514622413 source:c:\users\bader\desktop\recommendersystem\movie.cpp
+1514638981 source:c:\users\bader\desktop\recommendersystem\movie.cpp
 	"Movie.h"
 	<iostream>
 	<vector>
@@ -230,10 +230,12 @@
 	<vector>
 	<math.h>
 
-1514636136 source:c:\users\bader\desktop\recommendersystem\user.cpp
+1514640578 source:c:\users\bader\desktop\recommendersystem\user.cpp
 	"User.h"
 	<iostream>
 	<vector>
+	<numeric>
+	<functional>
 
 1514629734 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
 	"MatrixVector.h"

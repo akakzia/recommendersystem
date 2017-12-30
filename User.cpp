@@ -23,8 +23,9 @@ vector<float> User::getRatings()const{
 }
 void User::getAvg(){
 
-    //float avg = accumulate( ratings.begin(), ratings.end(), 0.0)/(ratings.size()-1);
-    //ratings[0] = avg;
+    //float avg = accumulate( ratings.begin(), ratings.end(), 0.0);
+    //cout<<avg<<" "<<ratings.size()<<endl;
+    //ratings[0] = avg/(ratings.size()-1);
 
     int i=1;
     int j=0;
@@ -37,7 +38,6 @@ void User::getAvg(){
         i++;
     }
     ratings[0]=sum/j;
-
 }
 void User::assignRatings(vector<float> r){
     ratings=r;
