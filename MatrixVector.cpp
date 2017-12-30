@@ -9,6 +9,12 @@ MatrixVector::MatrixVector(int l,int c):Matrix(l,c)
         data.push_back(0);
     }
 }
+MatrixVector::MatrixVector( const MatrixVector &obj){
+    dimCol = obj.dimCol;
+    dimRow = obj.dimRow;
+    data=obj.data;
+}
+
 float MatrixVector::getEl(int i,int j)const
 {
     return data.at(i*dimCol+j);

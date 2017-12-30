@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="Algorithm.h" />
 		<Unit filename="CoFilterAlgorithm.h" />
+		<Unit filename="Data.cpp" />
+		<Unit filename="Data.h" />
 		<Unit filename="Matrix.cpp" />
 		<Unit filename="Matrix.h" />
 		<Unit filename="Matrix2D.cpp" />
@@ -46,8 +48,6 @@
 		<Unit filename="Movie.h" />
 		<Unit filename="Rating.cpp" />
 		<Unit filename="Rating.h" />
-		<Unit filename="Similarity.cpp" />
-		<Unit filename="Similarity.h" />
 		<Unit filename="User.cpp" />
 		<Unit filename="User.h" />
 		<Unit filename="functions.cpp" />

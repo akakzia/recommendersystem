@@ -23,3 +23,13 @@ vector<float> MatrixMap::getRow(int c){
     data.at(c).insert(data.at(c).begin(), 0.0);
     return data.at(c);
 }
+
+vector<float> MatrixMap::getCol(int c){
+    vector <float> column;
+    for(int i=0;i<dimRow;i++){
+        column.push_back(data.at(i).at(c));
+    }
+    return column;
+}
+
+

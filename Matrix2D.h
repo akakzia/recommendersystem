@@ -15,5 +15,8 @@ public:
     ~Matrix2D(); // dtor.
     float getEl(int,int) const;
     void setEl(int,int,float);
+    vector<float> getColumn(int);
+    vector<float> getRow(int);
+
 };
 #endif

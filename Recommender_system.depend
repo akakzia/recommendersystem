@@ -134,3 +134,126 @@
 1514589329 d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.h
 	<iostream>
 
+1514642939 source:c:\users\bader\desktop\recommendersystem\functions.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	<string>
+	<map>
+	<math.h>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+	"MatrixVector.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
+
+1514622413 c:\users\bader\desktop\recommendersystem\movie.h
+	<iostream>
+	<string>
+	<vector>
+
+1514293251 c:\users\bader\desktop\recommendersystem\rating.h
+	<iostream>
+	<string>
+	<vector>
+
+1514471060 c:\users\bader\desktop\recommendersystem\user.h
+	<iostream>
+	<string>
+	<vector>
+
+1514014645 c:\users\bader\desktop\recommendersystem\similarity.h
+	<vector>
+	<iostream>
+
+1514629360 c:\users\bader\desktop\recommendersystem\matrixvector.h
+	<iostream>
+	<vector>
+	"Matrix.h"
+
+1514627522 c:\users\bader\desktop\recommendersystem\matrix.h
+	<vector>
+
+1514642964 source:c:\users\bader\desktop\recommendersystem\main.cpp
+	"Rating.h"
+	"Movie.h"
+	"User.h"
+	"Matrix.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
+	"MatrixVector.h"
+	"functions.h"
+	"Data.h"
+
+1514628371 c:\users\bader\desktop\recommendersystem\matrix2d.h
+	<iostream>
+	"Matrix.h"
+
+1514628393 c:\users\bader\desktop\recommendersystem\matrixmap.h
+	<iostream>
+	<map>
+	<vector>
+	"Matrix.h"
+
+1514642958 c:\users\bader\desktop\recommendersystem\functions.h
+	<iostream>
+
+1514578182 source:c:\users\bader\desktop\recommendersystem\matrix.cpp
+	"Matrix.h"
+	<iostream>
+	<vector>
+
+1514643085 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
+	"Matrix2D.h"
+	<iostream>
+
+1514628371 source:c:\users\bader\desktop\recommendersystem\matrixmap.cpp
+	"MatrixMap.h"
+	<iostream>
+	<map>
+	<vector>
+
+1514638981 source:c:\users\bader\desktop\recommendersystem\movie.cpp
+	"Movie.h"
+	<iostream>
+	<vector>
+
+1514293251 source:c:\users\bader\desktop\recommendersystem\rating.cpp
+	"Rating.h"
+	<iostream>
+
+1514578182 source:c:\users\bader\desktop\recommendersystem\similarity.cpp
+	"Similarity.h"
+	<iostream>
+	<vector>
+	<math.h>
+
+1514640578 source:c:\users\bader\desktop\recommendersystem\user.cpp
+	"User.h"
+	<iostream>
+	<vector>
+	<numeric>
+	<functional>
+
+1514629734 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
+	"MatrixVector.h"
+	<iostream>
+	<vector>
+
+1514628503 source:c:\users\bader\desktop\recommendersystem\data.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	<string>
+	<map>
+	<vector>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+
+1514632697 c:\users\bader\desktop\recommendersystem\data.h
+	<iostream>
+
