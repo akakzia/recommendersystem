@@ -21,5 +21,6 @@ public:
     void getAvg();
     int getId()const;
     int gethId()const;
+    Movie& operator=(Movie&);
 };
 #endif

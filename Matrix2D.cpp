@@ -12,6 +12,16 @@ Matrix2D::Matrix2D(int rows, int columns):Matrix(rows,columns) {
             data[i][j]=0;
     }
 }
+Matrix2D::Matrix2D():Matrix(10198,2114) {
+    totalSize = dimCol * dimRow;
+    data = new float*[dimRow]();
+    for(int i = 0; i < dimRow; ++i)
+    data[i] = new float[dimCol];
+    for (int i=0; i<dimRow;i++){
+        for (int j=0;j<dimCol;j++)
+            data[i][j]=0;
+    }
+}
 Matrix2D::~Matrix2D() {
     if (data) {
         delete[] data;

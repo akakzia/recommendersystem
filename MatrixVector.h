@@ -9,6 +9,7 @@ class MatrixVector:public Matrix //Matrice organisée en vector
     vector<float> data;
 public:
     MatrixVector(int,int);
+    MatrixVector();
     MatrixVector( const MatrixVector &obj);
     float getEl(int,int)const;
     void setEl(int,int,float);

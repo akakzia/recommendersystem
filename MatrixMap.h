@@ -11,6 +11,7 @@ public:
     map<int,vector<float> > data;
 public:
     MatrixMap(int,int);
+    MatrixMap();
     float getEl(int,int)const;
     void setEl(int,int,float);
     vector<float> getRow(int);

@@ -9,6 +9,13 @@ MatrixVector::MatrixVector(int l,int c):Matrix(l,c)
         data.push_back(0);
     }
 }
+MatrixVector::MatrixVector():Matrix(10198,2114)
+{
+    for (int i=0; i<dimRow*dimCol; i++)
+    {
+        data.push_back(0);
+    }
+}
 MatrixVector::MatrixVector( const MatrixVector &obj){
     dimCol = obj.dimCol;
     dimRow = obj.dimRow;

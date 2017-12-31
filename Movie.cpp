@@ -53,5 +53,14 @@ int Movie::gethId()const{
 void Movie::assignRatings(vector<float> r){
     ratings=r;
 }
+Movie& Movie::operator=(Movie& M){
+    if(&M!=this){
+        id=M.id;
+        hId=M.hId;
+        title=M.title;
+        ratings=M.ratings;
+    }
+    return *this;
+}
 
 

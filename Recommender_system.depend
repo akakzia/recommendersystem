@@ -24,12 +24,7 @@
 	<iostream>
 	<vector>
 
-1514591390 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\main.cpp
-	<iostream>
-	<vector>
-	<fstream>
-	<cstdlib>
-	<sstream>
+1514721558 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\main.cpp
 	"Rating.h"
 	"Movie.h"
 	"User.h"
@@ -37,29 +32,31 @@
 	"Matrix2D.h"
 	"MatrixMap.h"
 	"MatrixVector.h"
-	"Similarity.h"
 	"functions.h"
+	"Data.h"
+	"Algorithm.h"
+	"CFAlgorithm.h"
+	"CFuser.h"
 
-1514582813 d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.h
+1514710649 d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.h
 	<iostream>
 	<string>
 	<vector>
 
-1514581642 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixvector.cpp
+1514667067 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixvector.cpp
 	"MatrixVector.h"
 	<iostream>
 	<vector>
 
-1514581566 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixvector.h
+1514665251 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixvector.h
 	<iostream>
 	<vector>
 	"Matrix.h"
 
-1514559361 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix.h
-	<iostream>
+1514649526 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix.h
 	<vector>
 
-1514590251 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.cpp
+1514710690 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\movie.cpp
 	"Movie.h"
 	<iostream>
 	<vector>
@@ -83,23 +80,25 @@
 	<vector>
 	<iostream>
 
-1514447793 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\user.cpp
+1514649526 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\user.cpp
 	"User.h"
 	<iostream>
 	<vector>
+	<numeric>
+	<functional>
 
 1514447771 d:\2ata\in204\projet cpp\cloned\recommendersystem\user.h
 	<iostream>
 	<string>
 	<vector>
 
-1514285146 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixmap.cpp
+1514665480 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixmap.cpp
 	"MatrixMap.h"
 	<iostream>
 	<map>
 	<vector>
 
-1514285145 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixmap.h
+1514665487 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrixmap.h
 	<iostream>
 	<map>
 	<vector>
@@ -110,28 +109,30 @@
 	<iostream>
 	<vector>
 
-1514246329 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix2d.h
+1514665398 d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix2d.h
 	<iostream>
 	"Matrix.h"
 
-1514246329 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix2d.cpp
+1514665376 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\matrix2d.cpp
 	"Matrix2D.h"
 	<iostream>
 
-1514591852 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.cpp
-	<string>
-	<map>
+1514717505 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.cpp
 	<iostream>
-	"Movie.h"
-	"Rating.h"
-	"User.h"
-	"Similarity.h"
-	"MatrixVector.h"
 	<fstream>
 	<cstdlib>
 	<sstream>
+	<string>
+	<map>
+	<math.h>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+	"MatrixVector.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
 
-1514589329 d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.h
+1514659291 d:\2ata\in204\projet cpp\cloned\recommendersystem\functions.h
 	<iostream>
 
 1514642939 source:c:\users\bader\desktop\recommendersystem\functions.cpp
@@ -256,4 +257,98 @@
 
 1514632697 c:\users\bader\desktop\recommendersystem\data.h
 	<iostream>
+
+1514649526 d:\2ata\in204\projet cpp\cloned\recommendersystem\data.h
+	<iostream>
+
+1514649526 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\data.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	<string>
+	<map>
+	<vector>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+
+1514724319 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\algorithm.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	<string>
+	<map>
+	<math.h>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+	"MatrixVector.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
+	"Algorithm.h"
+
+1514724795 d:\2ata\in204\projet cpp\cloned\recommendersystem\algorithm.h
+	<iostream>
+	"Rating.h"
+	"User.h"
+	"Movie.h"
+	<string>
+	<map>
+
+1514723860 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\cfalgorithm.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	<string>
+	<map>
+	<math.h>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+	"MatrixVector.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
+	"CFAlgorithm.h"
+	<locale>
+
+1514724751 d:\2ata\in204\projet cpp\cloned\recommendersystem\cfalgorithm.h
+	<iostream>
+	"User.h"
+	"Movie.h"
+	"Algorithm.h"
+	"Matrix.h"
+	"MatrixVector.h"
+	"MatrixMap.h"
+	"Matrix2D.h"
+	<string>
+
+1514670897 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\cfuser.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	<string>
+	<map>
+	<math.h>
+	"Movie.h"
+	"Rating.h"
+	"User.h"
+	"MatrixVector.h"
+	"Matrix2D.h"
+	"MatrixMap.h"
+	"CFuser.h"
+
+1514716350 d:\2ata\in204\projet cpp\cloned\recommendersystem\cfuser.h
+	<iostream>
+	"User.h"
+	"Movie.h"
+	"MatrixVector.h"
+	"Matrix2D.h"
+	"Matrix2D.h"
+	<map>
+	<string>
+	"CFAlgorithm.h"
 

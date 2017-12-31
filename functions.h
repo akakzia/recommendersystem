@@ -16,5 +16,5 @@ float predictRate(map<int,Movie>, map<int,float>,int, int);
 void CFuser(map<int,User> allUsers,map<int,Movie> allMovies,MatrixVector U);
 void CFmovie(map<int,User> allUsers,map<int,Movie> allMovies,MatrixVector U);
 MatrixVector Similarity_Vector(MatrixVector);
-float cos_similarity(vector<float>,vector<float> );
+float cos_similarity(vector<float>,vector<float>);
 #endif
