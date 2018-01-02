@@ -1,5 +1,5 @@
 #include "CFAlgorithm.h"
-
+#include "Movie.h"
 using namespace std;
 
 

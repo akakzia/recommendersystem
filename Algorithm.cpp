@@ -25,10 +25,14 @@ Algorithm::Algorithm(){
 //Load Movies in Map : used .csv instead of .dat faster access to data
 void Algorithm::loadMovies(){
     std::ifstream file(movieFileAddress.c_str());
-    std::string line;
+    std::string line,line1;
+    ifstream in_stream;
     std::getline(file, line);
     int row=1;
     int id;
+    int movieid,tagid;
+    float tag_weight;
+
     cout << "Loading movies..." << "\n";
     while (file.good())
     {
@@ -52,6 +56,24 @@ void Algorithm::loadMovies(){
         allMovies.insert(std::pair<int,Movie>(id,O));
         row++;
     }
+    //Open input file.
+    in_stream.open("data/movie_tags.dat");
+
+    if (in_stream.fail())
+    {
+        cout << "Input file opening failed";
+        exit(1);
+    }
+    getline(in_stream,line1);
+    while (! in_stream.eof() ) //Runs while the file is NOT at the end
+		{
+            getline(in_stream,line1);//Gets a single line from file
+			std::istringstream iss(line1); //get numbers in the line
+            iss >>movieid>>tagid>>tag_weight;
+            allMovies[movieid].setTag(tagid,tag_weight);
+		}
+		in_stream.close(); //Closes the file
+
     cout << "Movies loading succeeded!" << "\n";
 }
 

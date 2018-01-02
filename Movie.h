@@ -9,7 +9,8 @@ class Movie
     int id;
     int hId;
     string title;
-    vector<float> ratings;
+    vector <float> ratings;
+    vector <float> profile;
 public:
     Movie(int id,string title);
     Movie (int,int,string);
@@ -22,5 +23,8 @@ public:
     int getId()const;
     int gethId()const;
     Movie& operator=(Movie&);
+    void setTag(int,float);
+    vector <float> getProfile();
+
 };
 #endif
