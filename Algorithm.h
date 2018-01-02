@@ -23,7 +23,7 @@ public:
     void loadRatings();
     void loadMovies();
     void loadUsers();
-    float cos_similarity(vector<float>,vector<float>);
+    virtual float cos_similarity(vector<float>,vector<float>);
     map<int, float> getNeighbors(map<int, float>, int);
     float predictRate(map<int,User>, map<int,float>,int, int);
     float predictRate(map<int,Movie>, map<int,float>,int, int);

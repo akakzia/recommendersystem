@@ -32,8 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Algorithm.cpp" />
 		<Unit filename="Algorithm.h" />
-		<Unit filename="CoFilterAlgorithm.h" />
+		<Unit filename="CBAlgorithm.cpp" />
+		<Unit filename="CBAlgorithm.h" />
+		<Unit filename="CFAlgorithm.cpp" />
+		<Unit filename="CFAlgorithm.h" />
 		<Unit filename="Data.cpp" />
 		<Unit filename="Data.h" />
 		<Unit filename="Matrix.cpp" />

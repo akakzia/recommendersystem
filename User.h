@@ -14,9 +14,10 @@ class User
     vector <float> ratings;
     vector <float> profile;
 public:
-    User(int);
-    User (int, int);
     User();
+    User(int);
+    User(int, int);
+
     void addRating(float);
     vector<float> getRatings()const;
     void getAvg();

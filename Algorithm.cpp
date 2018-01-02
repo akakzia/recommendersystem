@@ -134,14 +134,26 @@ void Algorithm::loadRatings(){ //create vector of all ratings
 		in_stream.close(); //Closes the file
 }
 float Algorithm::cos_similarity(vector<float> U1,vector<float>U2){
-    float avg_U1, avg_U2;
     float a=0;
     float b=0;
     float c=0;
-    avg_U1=U1[0];
-    avg_U2=U2[0];
-    int i;
-    for (i=1; i<U1.size(); i++){
+    int i=1;
+    int j1=0,j2;
+    float avg_U1=0;
+    float avg_U2=0;
+
+    while (i<U1.size()){
+        if (U1.at(i)!=0){
+            j1++;
+            avg_U2+=U2[i];
+        }
+        if (U2.at(i)!=0){
+            j2++;
+            avg_U2+=U2[i];
+        }
+        i++;
+    }
+    for (int i=1; i<U1.size(); i++){
         a=a+((U1[i]!=0)*(U1[i]-avg_U1))*((U2[i]-avg_U2)*(U2[i]!=0));
         b=b+((U1[i]!=0)*(U1[i]-avg_U1))*(U1[i]-avg_U1);
         c=c+((U2[i]-avg_U2)*(U2[i]!=0))*(U2[i]-avg_U2);

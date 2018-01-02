@@ -1,5 +1,5 @@
 #include "CFAlgorithm.h"
-#include "Movie.h"
+#include "CBAlgorithm.h"
 using namespace std;
 
 
@@ -9,6 +9,8 @@ int main()
     string mAd="data/movies.csv";
     string rAd="data/user_ratedmovies-timestamps.dat";
     CFAlgorithm Algo(uAd,mAd,rAd);
-    Algo.execute();
+    CBAlgorithm Al(uAd,mAd,rAd);
+//    Algo.execute();
+    Al.execute();
     return 0;
 }

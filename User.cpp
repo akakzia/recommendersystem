@@ -25,10 +25,6 @@ vector<float> User::getRatings()const{
 }
 void User::getAvg(){
 
-    //float avg = accumulate( ratings.begin(), ratings.end(), 0.0);
-    //cout<<avg<<" "<<ratings.size()<<endl;
-    //ratings[0] = avg/(ratings.size()-1);
-
     int i=1;
     int j=0;
     float sum=0;
@@ -54,6 +50,7 @@ int User::gethId()const{
 void User::setProfile(map <int,Movie> M){
     vector <float> m_p;
     int n=0;
+    cout<<M.size()<<endl;
     for(std::map<int,Movie>::iterator it=M.begin(); it !=M.end();it++){
         if (ratings[it->second.gethId()]!=0){
             n++;
@@ -64,6 +61,7 @@ void User::setProfile(map <int,Movie> M){
         }
     }
     std::transform(profile.begin(), profile.end(), profile.begin(),std::bind1st(std::multiplies<float>(),1/n));
+    cout<<"done"<<endl;
 }
 
 vector<float> User::getProfile(){
