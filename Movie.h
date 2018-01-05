@@ -4,13 +4,14 @@
 using namespace std;
 #include<string>
 #include<vector>
+#include <map>
 class Movie
 {
     int id;
     int hId;
     string title;
     vector <float> ratings;
-    vector <float> profile;
+    map <int, float> profile;
 public:
     Movie(int id,string title);
     Movie (int,int,string);
@@ -24,7 +25,7 @@ public:
     int gethId()const;
     Movie& operator=(Movie&);
     void setTag(int,float);
-    vector <float> getProfile();
+    map <int, float> getProfile()const;
 
 };
 #endif

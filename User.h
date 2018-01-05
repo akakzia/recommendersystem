@@ -12,7 +12,7 @@ class User
     int id;
     int hId;
     vector <float> ratings;
-    vector <float> profile;
+    map<int,float> profile;
 public:
     User();
     User(int);
@@ -25,6 +25,6 @@ public:
     int getId()const;
     int gethId()const;
     void setProfile(map <int,Movie>);
-    vector <float> getProfile();
+    map<int, float> getProfile()const;
 };
 #endif

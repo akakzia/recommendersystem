@@ -24,8 +24,10 @@ class CBAlgorithm: public Algorithm{
 public:
     CBAlgorithm(string,string,string);
     CBAlgorithm();
-    void execute();
-    float cos_similarity(vector <float>,vector <float> );
+    void execute(int);
+    float cos_similarity(map <int, float>,map <int, float> );
+    map <int,float> getTop(map <int,float> sim,int top);
+
 };
 
 #endif // CBALGORITHM_H

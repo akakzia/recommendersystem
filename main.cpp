@@ -11,6 +11,6 @@ int main()
     CFAlgorithm Algo(uAd,mAd,rAd);
     CBAlgorithm Al(uAd,mAd,rAd);
 //    Algo.execute();
-    Al.execute();
+    Al.execute(1);
     return 0;
 }

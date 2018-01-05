@@ -214,3 +214,84 @@ void Algorithm::learning(map<int,Movie> M, map<int,User> U){
 }
 void Algorithm::execute(){
 }
+
+void Algorithm::learning_vector(map<int,Movie> M, map<int,User> U){
+    //Filling the matrix vector
+    ifstream in_stream;
+    string line;
+    float rate;
+    int movieid,userid;
+    cout << "Learning for Vector Matrix in progress ..." << "\n";
+    //Open input file.
+    in_stream.open("data/user_ratedmovies-timestamps.dat"); //open input file
+
+    if (in_stream.fail())   //check if file failed to open
+    {
+        cout << "Input file opening failed";
+        exit(1);
+    }
+    getline(in_stream,line);
+    while (! in_stream.eof() ) //Runs while the file is NOT at the end
+		{
+            getline(in_stream,line);//Gets a single line from file
+			std::istringstream iss(line); //get numbers in the line
+            iss >>userid>>movieid>>rate;
+            M_vector.setEl(M[movieid].gethId(),U[userid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
+		}
+		in_stream.close(); //Closes the file
+		cout << "Learning complete !" << "\n";
+}
+
+void Algorithm::learning_2D(map<int,Movie> M, map<int,User> U){
+    //Filling the matrix vector
+    ifstream in_stream;
+    string line;
+    float rate;
+    int movieid,userid;
+    cout << "Learning for 2D Matrix in progress ..." << "\n";
+    //Open input file.
+    in_stream.open("data/user_ratedmovies-timestamps.dat"); //open input file
+
+    if (in_stream.fail())   //check if file failed to open
+    {
+        cout << "Input file opening failed";
+        exit(1);
+    }
+    getline(in_stream,line);
+    while (! in_stream.eof() ) //Runs while the file is NOT at the end
+		{
+            getline(in_stream,line);//Gets a single line from file
+			std::istringstream iss(line); //get numbers in the line
+            iss >>userid>>movieid>>rate;
+            M_2D.setEl(M[movieid].gethId(),U[userid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
+		}
+		in_stream.close(); //Closes the file
+		cout << "Learning complete !" << "\n";
+}
+
+void Algorithm::learning_map(map<int,Movie> M, map<int,User> U){
+    //Filling the matrix vector
+    ifstream in_stream;
+    string line;
+    float rate;
+    int movieid,userid;
+    cout << "Learning for Map Matrix in progress ..." << "\n";
+    //Open input file.
+    in_stream.open("data/user_ratedmovies-timestamps.dat"); //open input file
+
+    if (in_stream.fail())   //check if file failed to open
+    {
+        cout << "Input file opening failed";
+        exit(1);
+    }
+    getline(in_stream,line);
+    while (! in_stream.eof() ) //Runs while the file is NOT at the end
+		{
+            getline(in_stream,line);//Gets a single line from file
+			std::istringstream iss(line); //get numbers in the line
+            iss >>userid>>movieid>>rate;
+            M_map.setEl(M[movieid].gethId(),U[userid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
+		}
+		in_stream.close(); //Closes the file
+		cout << "Learning complete !" << "\n";
+}

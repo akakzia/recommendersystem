@@ -7,7 +7,7 @@ Movie::Movie(int i,string t)
     id=i;
     title=t;
     ratings.push_back(0);
-    for(int i=0;i<16529;i++){ profile.push_back(i);}
+    //for(int i=0;i<16529;i++){ profile.push_back(i);}
 }
 Movie::Movie(int i,int h, string t)
 {
@@ -15,7 +15,7 @@ Movie::Movie(int i,int h, string t)
     hId=h;
     title=t;
     ratings.push_back(0);
-    for(int i=0;i<16529;i++){ profile.push_back(i);}
+    //for(int i=0;i<16529;i++){ profile.push_back(i);}
 }
 Movie::Movie(){}
 void Movie::addRating(float r)
@@ -66,9 +66,9 @@ Movie& Movie::operator=(Movie& M){
 }
 
 void Movie::setTag(int tagid, float tag_weight){
-    profile.at(tagid)=tag_weight;
+    profile.insert(pair<int,float>(tagid,tag_weight));
 }
 
-vector <float> Movie::getProfile(){
+map<int,float> Movie::getProfile()const{
     return profile;
 }
