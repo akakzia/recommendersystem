@@ -51,12 +51,16 @@ void User::setProfile(map <int,Movie> M){
     map<int, float> m_p;
     int n=0;
     cout<<"Setting Profile..."<<endl;
+    for(std::map<int,float>::iterator it=M[1].getProfile().begin(); it !=M[1].getProfile().end();it++){
+        profile.insert(pair<int,float>(it->first,0));
+    }
+
     for(std::map<int,Movie>::iterator it=M.begin(); it !=M.end();it++){
         if (ratings[it->second.gethId()]!=0){
             n++;
             m_p=it->second.getProfile();
             for(std::map<int,float>::iterator i = m_p.begin(); i != m_p.end(); ++i){
-                profile.insert(pair<int,float>(i->first,profile[i->first]+ratings[it->second.gethId()]*m_p[i->first]));
+                profile[it->first]=profile[i->first]+ratings[it->second.gethId()]*m_p[i->first];
             }
         }
     }

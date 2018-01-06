@@ -1,14 +1,42 @@
 #include "CBAlgorithm.h"
 
 CBAlgorithm::CBAlgorithm(){}
-CBAlgorithm::CBAlgorithm(string a,string b,string c):Algorithm(a,b,c){}
+CBAlgorithm::CBAlgorithm(string a,string b,string c):Algorithm(a,b,c){
+    std::ifstream file(movieFileAddress.c_str());
+
+    std::string line;
+    std::getline(file, line);
+    int id;
+
+    //loading tags
+    while (file.good())
+    {
+
+        std::getline(file, line);
+        if ( !file.good() )
+            break;
+
+        std::stringstream iss(line);
+        std::string val;
+        std::getline(iss, val, ';');
+        if ( !iss.good() )
+            break;
+
+        std::stringstream convertor(val);
+        convertor >> id;
+        std::getline(iss, val, ';');
+        if ( !iss.good() )
+            break;
+        tags.insert(std::pair<int,string>(id,val));
+    }
+}
 
 float CBAlgorithm::cos_similarity(map <int,float> U1, map <int,float>U2){
     /*
 
     */
     float a,b,c;
-    for (std::map<int,float>::iterator it = U1.begin(); it != U1.end(); ++it){
+    for (std::map<int,string>::iterator it = tags.begin(); it != tags.end(); ++it){
         a=a+((U1[it->first]!=0)*U1[it->first]*U2[it->first]*(U2[it->first]!=0));
         b=b+((U1[it->first]!=0)*U1[it->first]*U1[it->first]);
         c=c+(U2[it->first]*(U2[it->first]!=0)*U2[it->first]);
@@ -66,31 +94,34 @@ void CBAlgorithm::execute(int methode){
             learning_2D(allMovies,allUsers);
             allUsers[user].assignRatings(M_2D.getColumn(index));
             allUsers[user].setProfile(allMovies);
+            cout<<"calculating similarities..."<<endl;
             for(std::map<int,Movie>::iterator it=allMovies.begin();it!=allMovies.end();it++){
+                if (allUsers[user].getRatings()[it->second.gethId()]==0){
                 similarity.insert(pair<int,float>(it->first,cos_similarity(allUsers[user].getProfile(),it->second.getProfile())));
+                }
             }
             top_sim=getNeighbors(similarity,top);
             cout<<"The top 10 recommended movies are:"<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<"x-"<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<":"<<it->first<<endl;
             }
     }
+
     else if (methode==1){
 
             learning_vector(allMovies,allUsers);
             allUsers[user].assignRatings(M_vector.getColumn(index));
             allUsers[user].setProfile(allMovies);
-            for (std::map<int,float>::iterator it=allUsers[user].getProfile().begin(); it!=allUsers[user].getProfile().end(); ++it){
-                cout<<it->first<<" "<<it->second<<endl;
-            }
+            cout<<"calculating similarities..."<<endl;
             for(std::map<int,Movie>::iterator it=allMovies.begin();it!=allMovies.end();it++){
+                if (allUsers[user].getRatings()[it->second.gethId()]==0){
                 similarity.insert(pair<int,float>(it->first,cos_similarity(allUsers[user].getProfile(),it->second.getProfile())));
+                }
             }
-
             top_sim=getNeighbors(similarity,top);
             cout<<"The top 10 recommended movies are:"<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<"x-"<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<":"<<it->first<<endl;
             }
     }
     else if (methode==2){
@@ -98,13 +129,16 @@ void CBAlgorithm::execute(int methode){
             learning_map(allMovies,allUsers);
             allUsers[user].assignRatings(M_map.getColumn(index));
             allUsers[user].setProfile(allMovies);
+            cout<<"calculating similarities..."<<endl;
             for(std::map<int,Movie>::iterator it=allMovies.begin();it!=allMovies.end();it++){
+                if (allUsers[user].getRatings()[it->second.gethId()]==0){
                 similarity.insert(pair<int,float>(it->first,cos_similarity(allUsers[user].getProfile(),it->second.getProfile())));
+                }
             }
             top_sim=getNeighbors(similarity,top);
             cout<<"The top 10 recommended movies are:"<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<"x-"<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<":"<<it->first<<endl;
             }
 
 

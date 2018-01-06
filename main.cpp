@@ -5,12 +5,14 @@ using namespace std;
 
 int main()
 {
+    map <int,float> p;
+    cout<<p[15];
     string uAd="data/user_taggedmovies.csv";
     string mAd="data/movies.csv";
     string rAd="data/user_ratedmovies-timestamps.dat";
-    CFAlgorithm Algo(uAd,mAd,rAd);
+   // CFAlgorithm Algo(uAd,mAd,rAd);
     CBAlgorithm Al(uAd,mAd,rAd);
-//    Algo.execute();
-    Al.execute(1);
+    //Algo.execute();
+   Al.execute(1);
     return 0;
 }

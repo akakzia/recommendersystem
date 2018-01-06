@@ -22,6 +22,7 @@ using namespace std;
 class CBAlgorithm: public Algorithm{
 
 public:
+    map<int,string> tags;
     CBAlgorithm(string,string,string);
     CBAlgorithm();
     void execute(int);

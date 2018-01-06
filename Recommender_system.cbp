@@ -38,8 +38,6 @@
 		<Unit filename="CBAlgorithm.h" />
 		<Unit filename="CFAlgorithm.cpp" />
 		<Unit filename="CFAlgorithm.h" />
-		<Unit filename="Data.cpp" />
-		<Unit filename="Data.h" />
 		<Unit filename="Matrix.cpp" />
 		<Unit filename="Matrix.h" />
 		<Unit filename="Matrix2D.cpp" />
