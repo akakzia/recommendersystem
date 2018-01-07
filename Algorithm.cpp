@@ -213,7 +213,7 @@ float Algorithm::predictRate(map<int,Movie> M, map<int,float> c,int m, int v){
 void Algorithm::learning(map<int,Movie> M, map<int,User> U){
 
 }
-void Algorithm::execute(){
+void Algorithm::execute(int m){
 }
 
 void Algorithm::learning_vector(map<int,Movie> M, map<int,User> U){
@@ -291,7 +291,7 @@ void Algorithm::learning_map(map<int,Movie> M, map<int,User> U){
             getline(in_stream,line);//Gets a single line from file
 			std::istringstream iss(line); //get numbers in the line
             iss >>userid>>movieid>>rate;
-            M_map.setEl(M[movieid].gethId(),U[userid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
+            M_map.setEl(U[userid].gethId(),M[movieid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
 		}
 		in_stream.close(); //Closes the file
 		cout << "Learning complete !" << "\n";

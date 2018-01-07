@@ -22,9 +22,11 @@ public:
     MatrixMap M_map;
     CFAlgorithm(string userFileAddress,string movieFileAddress,string ratingFileAddress);
     CFAlgorithm();
+    void cfuser(map<int,User>,map<int,Movie>,int);
+    void cfitem(map<int,User>,map<int,Movie>,int);
     //~CFAlgorithm();
 public:
     void learning(map<int,Movie>, map<int,User>);
-    void execute();
+    void execute(int);
 };
 #endif
