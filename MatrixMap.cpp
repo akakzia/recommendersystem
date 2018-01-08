@@ -3,7 +3,7 @@
 #include<map>
 #include<vector>
 using namespace std;
-/*MatrixMap::MatrixMap(int l, int c):Matrix(l,c)
+MatrixMap::MatrixMap(int l, int c):Matrix(l,c)
 {
     vector<float> temp;
     for (int j=0; j<c;j++){
@@ -12,7 +12,7 @@ using namespace std;
     for (int i=0; i<l;i++){
         data.insert(std::pair<int,vector<float> >(i,temp));
     }
-}*/
+}
 MatrixMap::MatrixMap():Matrix(2114,10198)
 {
     vector<float> temp;
@@ -22,6 +22,9 @@ MatrixMap::MatrixMap():Matrix(2114,10198)
     for (int i=0; i<dimRow;i++){
         data.insert(std::pair<int,vector<float> >(i,temp));
     }
+}
+MatrixMap::~MatrixMap(){
+    data.clear();
 }
 float MatrixMap::getEl(int i, int j)const{
     return data.at(i).at(j);

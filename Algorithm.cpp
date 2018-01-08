@@ -21,7 +21,14 @@ Algorithm::Algorithm(string uAd,string mAd,string rAd){
 Algorithm::Algorithm(){
 
 }
-//Algorithm::~Algorithm(){}
+Algorithm::~Algorithm(){
+    M_map.~MatrixMap();
+    M_2D.~Matrix2D();
+    M_vector.~MatrixVector();
+    allMovies.clear();
+    allUsers.clear();
+    cout << "Everything done !";
+}
 //Load Movies in Map : used .csv instead of .dat faster access to data
 void Algorithm::loadMovies(){
     std::ifstream file(movieFileAddress.c_str());

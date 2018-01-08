@@ -12,7 +12,7 @@ int main()
     string rAd="data/user_ratedmovies-timestamps.dat";
     CFAlgorithm Algo(uAd,mAd,rAd);
     //CBAlgorithm Al(uAd,mAd,rAd);
-    Algo.execute(1);//1 for Matrix2D - 2 for MatrixVector - 3 for MatrixMap
+    Algo.execute(3);//1 for Matrix2D - 2 for MatrixVector - 3 for MatrixMap
     //Al.execute(1);
     return 0;
 }

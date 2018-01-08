@@ -22,6 +22,10 @@ MatrixVector::MatrixVector( const MatrixVector &obj){
     data=obj.data;
 }
 
+MatrixVector::~MatrixVector(){
+    vector<float>().swap(data);
+}
+
 float MatrixVector::getEl(int i,int j)const
 {
     return data.at(i*dimCol+j);

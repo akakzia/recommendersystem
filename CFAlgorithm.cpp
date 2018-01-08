@@ -20,34 +20,6 @@ CFAlgorithm::CFAlgorithm(string uAd,string mAd,string rAd):Algorithm(uAd, mAd, r
 CFAlgorithm::CFAlgorithm():Algorithm(){
 
 }
-void CFAlgorithm::learning(map<int,Movie> M, map<int,User> U){
-    //Filling the matrix vector
-    ifstream in_stream;
-    string line;
-    float rate;
-    int movieid,userid;
-    cout << "Learning in progress ..." << "\n";
-    //Open input file.
-    in_stream.open("data/user_ratedmovies-timestamps.dat"); //open input file
-
-    if (in_stream.fail())   //check if file failed to open
-    {
-        cout << "Input file opening failed";
-        exit(1);
-    }
-    getline(in_stream,line);
-    while (! in_stream.eof() ) //Runs while the file is NOT at the end
-		{
-            getline(in_stream,line);//Gets a single line from file
-			std::istringstream iss(line); //get numbers in the line
-            iss >>userid>>movieid>>rate;
-            M_vector.setEl(M[movieid].gethId(),U[userid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
-            M_2D.setEl(M[movieid].gethId(),U[userid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
-            M_map.setEl(U[userid].gethId(),M[movieid].gethId(),rate); //sets element rate at i= movieid and j= userid (i and j start from 1)
-		}
-		in_stream.close(); //Closes the file
-		cout << "Learning complete !" << "\n";
-}
 
 void CFAlgorithm::cfuser(map<int,User> allUsers,map<int,Movie> allMovies,int how){
     int user=0; //user to predict
@@ -126,7 +98,7 @@ void CFAlgorithm::cfuser(map<int,User> allUsers,map<int,Movie> allMovies,int how
         else if (how==3){
             //Starts counting time for Matrix2D
             const clock_t begin_time1=clock();
-            allUsers[user].assignRatings(M_map.getCol(user)); // add rating vector for the user
+            allUsers[user].assignRatings(M_map.getCol(index)); // add rating vector for the user
             timeMap= timeMap+float(clock()-begin_time1);//Gets the time and stops counting for input
             allUsers[user].getAvg(); //calculate avg and store it in ratings[0]
             vector<float> ratings=allUsers[user].getRatings(); //get user ratings
@@ -308,7 +280,12 @@ void CFAlgorithm::execute(int how){
     loadMovies();
     loadUsers();
     cout << allMovies.size() << " Movies and " << allUsers.size() <<" Users loaded !\n";
-    learning(allMovies,allUsers);
+    if(how==1)
+        learning_2D(allMovies,allUsers);
+    if(how==2)
+        learning_vector(allMovies,allUsers);
+    if(how==3)
+        learning_map(allMovies,allUsers);
     reuse:
     int method;
     cout << "Select a method of collaborative filtering :\n1/USER-USER\n2/ITEM-ITEM\n";

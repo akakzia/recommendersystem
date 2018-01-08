@@ -24,7 +24,7 @@ protected:
     MatrixMap M_map;
     Algorithm(string,string,string);
     Algorithm();
-    //~Algorithm();
+    ~Algorithm();
 public:
     void loadRatings();
     void loadMovies();

@@ -11,6 +11,7 @@ public:
     MatrixVector(int,int);
     MatrixVector();
     MatrixVector( const MatrixVector &obj);
+    ~MatrixVector();
     float getEl(int,int)const;
     void setEl(int,int,float);
     vector<float> getColumn(int);
