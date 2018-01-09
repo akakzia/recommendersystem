@@ -150,17 +150,8 @@ float Algorithm::cos_similarity(vector<float> U1,vector<float>U2){
     float avg_U1=0;
     float avg_U2=0;
 
-    while (i<U1.size()){
-        if (U1.at(i)!=0){
-            j1++;
-            avg_U2+=U2[i];
-        }
-        if (U2.at(i)!=0){
-            j2++;
-            avg_U2+=U2[i];
-        }
-        i++;
-    }
+    avg_U1=U1[0];
+    avg_U2=U2[0];
     for (int i=1; i<U1.size(); i++){
         a=a+((U1[i]!=0)*(U1[i]-avg_U1))*((U2[i]-avg_U2)*(U2[i]!=0));
         b=b+((U1[i]!=0)*(U1[i]-avg_U1))*(U1[i]-avg_U1);
@@ -216,9 +207,6 @@ float Algorithm::predictRate(map<int,Movie> M, map<int,float> c,int m, int v){
         denom=denom + it->second;
     }
         return num/denom;
-}
-void Algorithm::learning(map<int,Movie> M, map<int,User> U){
-
 }
 void Algorithm::execute(int m){
 }

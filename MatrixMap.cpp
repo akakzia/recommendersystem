@@ -32,7 +32,7 @@ float MatrixMap::getEl(int i, int j)const{
 void MatrixMap::setEl(int i, int j, float e){
     data.at(i).at(j)=e;
 }
-vector<float> MatrixMap::getCol(int c){
+vector<float> MatrixMap::getColumn(int c){
     return data[c];
 }
 

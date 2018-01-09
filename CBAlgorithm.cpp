@@ -31,6 +31,9 @@ CBAlgorithm::CBAlgorithm(string a,string b,string c):Algorithm(a,b,c){
     }
 }
 
+CBAlgorithm::~CBAlgorithm() {
+    tags.clear();
+}
 float CBAlgorithm::cos_similarity(map <int,float> U1, map <int,float>U2){
     /*
 
@@ -89,7 +92,7 @@ void CBAlgorithm::execute(int methode){
         cin >> user;
         index=allUsers[user].gethId(); // return what when not found ?
     }
-    if (methode==0){
+    if (methode==1){
 
             learning_2D(allMovies,allUsers);
             allUsers[user].assignRatings(M_2D.getColumn(index));
@@ -107,7 +110,7 @@ void CBAlgorithm::execute(int methode){
             }
     }
 
-    else if (methode==1){
+    else if (methode==2){
 
             learning_vector(allMovies,allUsers);
             allUsers[user].assignRatings(M_vector.getColumn(index));
@@ -124,7 +127,7 @@ void CBAlgorithm::execute(int methode){
                 cout<<allMovies[it->first].getTitle()<<":"<<it->first<<endl;
             }
     }
-    else if (methode==2){
+    else if (methode==3){
 
             learning_map(allMovies,allUsers);
             allUsers[user].assignRatings(M_map.getColumn(index));

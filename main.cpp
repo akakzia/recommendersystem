@@ -5,14 +5,22 @@ using namespace std;
 
 int main()
 {
-    map <int,float> p;
-    //cout<<p[15];
+    int a,s;
     string uAd="data/user_taggedmovies.csv";
     string mAd="data/movies.csv";
     string rAd="data/user_ratedmovies-timestamps.dat";
-    CFAlgorithm Algo(uAd,mAd,rAd);
-    //CBAlgorithm Al(uAd,mAd,rAd);
-    Algo.execute(3);//1 for Matrix2D - 2 for MatrixVector - 3 for MatrixMap
-    //Al.execute(1);
+    cout<<"Which algorithm you want to use?"<<endl<<"1-Colaboratif Filtering: Predicts the rate of movie A for user B (15s -1 min)."<<endl<<"2-Content Based: Predicts top 10 recommended movies for user A (20 min)."<<endl;
+    cin>>a;
+    cout<<"Which structure you want to use?"<<endl<<"1-2D"<<endl<<"2-Vector"<<endl<<"3-Map"<<endl;
+    cin>>s;
+    if (a==1){
+        CFAlgorithm Algo(uAd,mAd,rAd);
+        Algo.execute(s);//1 for Matrix2D - 2 for MatrixVector - 3 for MatrixMap
+    }
+    else if(a==2){
+        CBAlgorithm Al(uAd,mAd,rAd);
+        Al.execute(s);
+    }
+
     return 0;
 }

@@ -13,7 +13,7 @@ using namespace std;
 class CFAlgorithm: public Algorithm
 {
 public:
-    CFAlgorithm(string userFileAddress,string movieFileAddress,string ratingFileAddress);
+    CFAlgorithm(string, string, string);
     CFAlgorithm();
     void cfuser(map<int,User>,map<int,Movie>,int);
     void cfitem(map<int,User>,map<int,Movie>,int);

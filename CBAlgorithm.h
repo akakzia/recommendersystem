@@ -25,9 +25,10 @@ public:
     map<int,string> tags;
     CBAlgorithm(string,string,string);
     CBAlgorithm();
-    void execute(int);
-    float cos_similarity(map <int, float>,map <int, float> );
+    ~CBAlgorithm();
+    float cos_similarity(map <int, float>,map <int, float>);
     map <int,float> getTop(map <int,float> sim,int top);
+    void execute(int);
 
 };
 

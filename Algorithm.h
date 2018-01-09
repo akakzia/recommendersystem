@@ -33,7 +33,6 @@ public:
     map<int, float> getNeighbors(map<int, float>, int);
     float predictRate(map<int,User>, map<int,float>,int, int);
     float predictRate(map<int,Movie>, map<int,float>,int, int);
-    virtual void learning(map<int,Movie>, map<int,User>);
     void learning_vector(map<int,Movie>, map<int,User>);
     void learning_2D(map<int,Movie>, map<int,User>);
     void learning_map(map<int,Movie>, map<int,User>);

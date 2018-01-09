@@ -98,7 +98,7 @@ void CFAlgorithm::cfuser(map<int,User> allUsers,map<int,Movie> allMovies,int how
         else if (how==3){
             //Starts counting time for Matrix2D
             const clock_t begin_time1=clock();
-            allUsers[user].assignRatings(M_map.getCol(index)); // add rating vector for the user
+            allUsers[user].assignRatings(M_map.getColumn(index)); // add rating vector for the user
             timeMap= timeMap+float(clock()-begin_time1);//Gets the time and stops counting for input
             allUsers[user].getAvg(); //calculate avg and store it in ratings[0]
             vector<float> ratings=allUsers[user].getRatings(); //get user ratings
@@ -114,7 +114,7 @@ void CFAlgorithm::cfuser(map<int,User> allUsers,map<int,Movie> allMovies,int how
             float temp;
             for (std::map<int,User>::iterator it=allUsers.begin(); it!=allUsers.end(); ++it){ //iterate over allusers
                     if ((it->first)!=user){ //except chosen user
-                        it->second.assignRatings(M_map.getCol(loop));
+                        it->second.assignRatings(M_map.getColumn(loop));
                         if (it->second.getRatings()[index_m]!=0){//if movie watched
                             it->second.getAvg();
                             temp = cos_similarity(ratings,it->second.getRatings());

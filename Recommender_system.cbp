@@ -52,8 +52,6 @@
 		<Unit filename="Rating.h" />
 		<Unit filename="User.cpp" />
 		<Unit filename="User.h" />
-		<Unit filename="functions.cpp" />
-		<Unit filename="functions.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

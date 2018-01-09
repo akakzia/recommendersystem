@@ -8,13 +8,11 @@ using namespace std;
 User::User(int i){
     id=i;
     ratings.push_back(0.0);
-    //for(int i=0;i<16529;i++){ profile.push_back(i);}
 }
 User::User(int i, int h){
     id=i;
     hId=h;
     ratings.push_back(0.0);
-    //for(int i=0;i<16529;i++){ profile.push_back(i);}
 }
 User::User(){}
 void User::addRating(float r){

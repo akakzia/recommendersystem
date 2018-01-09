@@ -14,8 +14,9 @@ class Movie
     map <int, float> profile;
 public:
     Movie(int id,string title);
-    Movie (int,int,string/*,map<int,float>*/);
+    Movie (int,int,string);
     Movie();
+
     void addRating(float);
     string getTitle()const;
     vector<float> getRatings()const;

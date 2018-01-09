@@ -1,2 +1,6 @@
 
 *.o
+obj/Debug/User.o
+obj/Debug/User.o
+obj/Debug/Movie.o
+obj/Debug/main.o

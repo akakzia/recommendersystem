@@ -8,17 +8,13 @@ Movie::Movie(int i,string t)
     title=t;
     ratings.push_back(0);
     profile;
-    //for(int i=0;i<16529;i++){ profile.push_back(i);}
 }
-Movie::Movie(int i,int h, string t/*,map<int,float> temp*/)
+Movie::Movie(int i,int h, string t)
 {
     id=i;
     hId=h;
     title=t;
     ratings.push_back(0);
-    //for (std::map<int,float>::iterator it=temp.begin(); it!=temp.end();it++)
-    //        profile.insert(pair<int,float>(it->first,it->second));
-    //for(int i=0;i<16529;i++){ profile.push_back(i);}
 }
 Movie::Movie(){}
 void Movie::addRating(float r)

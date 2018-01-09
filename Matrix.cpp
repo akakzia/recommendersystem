@@ -6,6 +6,7 @@ Matrix::Matrix(int rows ,int columns){
     dimCol = columns;
     dimRow = rows ;
 }
+Matrix::Matrix(){}
 
 float Matrix::getEl(int i,int j)const
 {
@@ -17,7 +18,6 @@ void Matrix::setEl(int i,int j,float e)
 vector<float> Matrix::getColumn(int i)
 {
 }
-Matrix::Matrix(){}
 
 
 int Matrix::getdimCol(){

@@ -16,6 +16,6 @@ public:
     float getEl(int,int)const;
     void setEl(int,int,float);
     vector<float> getRow(int);
-    vector<float> getCol(int);
+    vector<float> getColumn(int);
 };
 #endif
