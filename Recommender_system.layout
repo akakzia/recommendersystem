@@ -2,6 +2,16 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
+	<File name="Algorithm.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="807" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="CFAlgorithm.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="467" topLine="143" />
+=======
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="365" topLine="0" />
@@ -15,11 +25,24 @@
 	<File name="Rating.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="341" topLine="0" />
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		</Cursor>
+		<Folding>
+			<Collapse line="23" />
+			<Collapse line="37" />
+			<Collapse line="67" />
+			<Collapse line="97" />
+		</Folding>
 	</File>
+<<<<<<< HEAD
+	<File name="Rating.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="168" topLine="0" />
+=======
 	<File name="CFAlgorithm.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="372" topLine="0" />
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		</Cursor>
 	</File>
 	<File name="Movie.cpp" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -27,6 +50,11 @@
 			<Cursor1 position="215" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
+	<File name="MatrixVector.cpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="551" topLine="12" />
+=======
 	<File name="Movie.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="363" topLine="0" />
@@ -35,6 +63,7 @@
 	<File name="CBAlgorithm.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3205" topLine="59" />
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		</Cursor>
 	</File>
 	<File name="Matrix2D.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,16 +71,40 @@
 			<Cursor1 position="385" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
+	<File name="Matrix2D.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
 	<File name="Matrix.h" open="1" top="1" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="429" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="CBAlgorithm.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		<Cursor>
 			<Cursor1 position="647" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
+	<File name="CBAlgorithm.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="456" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="Movie.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="237" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Algorithm.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="49" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Matrix.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="274" topLine="0" />
+=======
 	<File name="Matrix2D.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="168" topLine="0" />
@@ -70,11 +123,37 @@
 	<File name="CFAlgorithm.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1527" topLine="55" />
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		</Cursor>
 		<Folding>
 			<Collapse line="201" />
 		</Folding>
 	</File>
+<<<<<<< HEAD
+	<File name="Rating.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="341" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CFAlgorithm.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="415" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="MatrixVector.h" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="345" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Movie.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="336" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="364" topLine="0" />
+=======
 	<File name="MatrixMap.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="439" topLine="0" />
@@ -98,21 +177,45 @@
 	<File name="Matrix.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="187" topLine="0" />
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		</Cursor>
 	</File>
 	<File name="Rating.cpp" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="4488" topLine="128" />
+		</Cursor>
+	</File>
+	<File name="Matrix.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="354" topLine="0" />
+=======
 			<Cursor1 position="168" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="MatrixMap.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="822" topLine="6" />
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		</Cursor>
 	</File>
 	<File name="User.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="263" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="MatrixMap.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="628" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="MatrixMap.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="276" topLine="0" />
+=======
 			<Cursor1 position="181" topLine="23" />
+>>>>>>> 35256786555e92ef22147a5ffb2a3d6d80dd8a24
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
