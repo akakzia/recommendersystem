@@ -27,7 +27,6 @@ Algorithm::~Algorithm(){
     M_vector.~MatrixVector();
     allMovies.clear();
     allUsers.clear();
-    cout << "Everything done !";
 }
 //Load Movies in Map : used .csv instead of .dat faster access to data
 void Algorithm::loadMovies(){
