@@ -1,7 +1,6 @@
 #include"Movie.h"
-#include<iostream>
-#include<vector>
-using namespace std;
+
+
 Movie::Movie(int i,string t)
 {
     id=i;
@@ -17,6 +16,12 @@ Movie::Movie(int i,int h, string t)
     ratings.push_back(0);
 }
 Movie::Movie(){}
+
+Movie::~Movie(){
+    profile.clear();
+    vector<float>().swap(ratings);
+
+}
 void Movie::addRating(float r)
 {
     ratings.push_back(r);

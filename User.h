@@ -1,12 +1,13 @@
 #ifndef USER_H
 #define USER_H
-#include<iostream>
+
 using namespace std;
 #include<string>
-#include<vector>
 #include <map>
+#include<iostream>
+#include<vector>
 #include "Movie.h"
-#include <algorithm>
+
 class User
 {
     int id;
@@ -17,7 +18,7 @@ public:
     User();
     User(int);
     User(int, int);
-
+    ~User();
     void addRating(float);
     vector<float> getRatings()const;
     void getAvg();

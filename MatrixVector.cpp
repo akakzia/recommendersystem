@@ -1,6 +1,4 @@
 #include"MatrixVector.h"
-#include<iostream>
-#include<vector>
 using namespace std;
 MatrixVector::MatrixVector(int l,int c):Matrix(l,c)
 {

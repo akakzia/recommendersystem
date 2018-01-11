@@ -1,15 +1,22 @@
 #ifndef ALGORITHM_H
 #define ALGORITHM_H
-#include<iostream>
+
 using namespace std;
-#include"Rating.h"
-#include"User.h"
-#include"Movie.h"
-#include "Matrix2D.h"
-#include "MatrixMap.h"
-#include "MatrixVector.h"
+
+#include<iostream>
+#include <fstream>
+#include <cstdlib>
+#include <sstream>
 #include<string>
 #include<map>
+#include <math.h>
+#include "Movie.h"
+#include "Rating.h"
+#include "User.h"
+#include "MatrixVector.h"
+#include "Matrix2D.h"
+#include "MatrixMap.h"
+
 class Algorithm
 {
 protected:

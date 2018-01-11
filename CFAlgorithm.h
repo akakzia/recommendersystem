@@ -2,6 +2,15 @@
 #define CFALGORITHM_H
 #include<iostream>
 using namespace std;
+#include<locale>
+#include<string>
+#include<iostream>
+#include <fstream>
+#include <cstdlib>
+#include <sstream>
+#include<string>
+#include<map>
+#include <math.h>
 #include"User.h"
 #include"Movie.h"
 #include"Algorithm.h"
@@ -9,7 +18,7 @@ using namespace std;
 #include"MatrixVector.h"
 #include"MatrixMap.h"
 #include"Matrix2D.h"
-#include<string>
+
 class CFAlgorithm: public Algorithm
 {
 public:

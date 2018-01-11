@@ -2,39 +2,15 @@
 
 CBAlgorithm::CBAlgorithm(){}
 CBAlgorithm::CBAlgorithm(string a,string b,string c):Algorithm(a,b,c){
-    std::ifstream file("data/tags.csv");
-
-    std::string line;
-    std::getline(file, line);
-    int id;
-
-    //loading tags
-    while (file.good())
-    {
-
-        std::getline(file, line);
-        if ( !file.good() )
-            break;
-
-        std::stringstream iss(line);
-        std::string val;
-        std::getline(iss, val, ';');
-        std::stringstream convertor(val);
-        convertor >> id;
-        std::getline(iss, val, ';');
-        tags.insert(std::pair<int,string>(id,val));
-    }
 }
 
-CBAlgorithm::~CBAlgorithm() {
-    tags.clear();
-}
+
 float CBAlgorithm::cos_similarity(map <int,float> U1, map <int,float>U2){
     /*
 
     */
     float a,b,c;
-    for (std::map<int,string>::iterator it = tags.begin(); it != tags.end(); ++it){
+    for (std::map<int,float>::iterator it = U1.begin(); it != U1.end(); ++it){
         a=a+((U1[it->first]!=0)*U1[it->first]*U2[it->first]*(U2[it->first]!=0));
         b=b+((U1[it->first]!=0)*U1[it->first]*U1[it->first]);
         c=c+(U2[it->first]*(U2[it->first]!=0)*U2[it->first]);
@@ -71,7 +47,7 @@ map <int,float> CBAlgorithm::getTop(map <int,float> sim,int top){
 void CBAlgorithm::execute(int methode){
     /*
     */
-
+    int choice;
     int user=0; // user to predict
     map <int, float> similarity; //map of similarities of user with all movies
     map <int, float> top_sim;
@@ -82,6 +58,7 @@ void CBAlgorithm::execute(int methode){
     loadMovies();
     loadUsers();
     cout << allMovies.size() << " Movies and " << allUsers.size() <<" Users loaded !\n";
+    reuse:
     while ((index > 2113) or (index < 1)){
         cout << "Enter the id of the user you want to recommend to : ";
         cin >> user;
@@ -99,9 +76,9 @@ void CBAlgorithm::execute(int methode){
                 }
             }
             top_sim=getNeighbors(similarity,top);
-            cout<<"The top 10 recommended movies are:"<<endl;
+            cout<<endl<<"The top 10 recommended movies are:"<<endl<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<allMovies[it->first].getTitle()<<": movieid="<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<" (id:"<<it->first<<")"<<endl;
             }
     }
 
@@ -117,9 +94,9 @@ void CBAlgorithm::execute(int methode){
                 }
             }
             top_sim=getNeighbors(similarity,top);
-            cout<<"The top 10 recommended movies are:"<<endl;
+            cout<<endl<<"The top 10 recommended movies are:"<<endl<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<allMovies[it->first].getTitle()<<": movieid="<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<" (id:"<<it->first<<")"<<endl;
             }
     }
     else if (methode==3){
@@ -134,12 +111,18 @@ void CBAlgorithm::execute(int methode){
                 }
             }
             top_sim=getNeighbors(similarity,top);
-            cout<<"The top 10 recommended movies are:"<<endl;
+            cout<<endl<<"The top 10 recommended movies are:"<<endl<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<allMovies[it->first].getTitle()<<": movieid="<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<" (id:"<<it->first<<")"<<endl;
             }
 
 
 
     }
+    cout << "\nSelect an action :\n1/Reuse\n2/Quit\n";
+    cin >> choice;
+    if (choice==1)
+        goto reuse;
+    else
+        cout << "GOOD BYE !";
 }

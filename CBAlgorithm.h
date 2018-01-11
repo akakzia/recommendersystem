@@ -2,9 +2,6 @@
 #define CBALGORITHM_H
 
 #include<iostream>
-#include <fstream>
-#include <cstdlib>
-#include <sstream>
 #include<string>
 #include<map>
 #include <math.h>
@@ -15,17 +12,14 @@
 #include "Matrix2D.h"
 #include "MatrixMap.h"
 #include "Algorithm.h"
-#include<locale>
 using namespace std;
 
 
 class CBAlgorithm: public Algorithm{
 
 public:
-    map<int,string> tags;
     CBAlgorithm(string,string,string);
     CBAlgorithm();
-    ~CBAlgorithm();
     float cos_similarity(map <int, float>,map <int, float>);
     map <int,float> getTop(map <int,float>,int);
     void execute(int);

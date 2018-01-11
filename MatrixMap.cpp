@@ -1,8 +1,5 @@
-#include"MatrixMap.h"
-#include<iostream>
-#include<map>
-#include<vector>
-using namespace std;
+#include "MatrixMap.h"
+
 MatrixMap::MatrixMap(int l, int c):Matrix(l,c)
 {
     vector<float> temp;

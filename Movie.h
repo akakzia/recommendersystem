@@ -1,6 +1,5 @@
 #ifndef MOVIE_H
 #define MOVIE_H
-#include<iostream>
 using namespace std;
 #include<string>
 #include<vector>
@@ -16,6 +15,7 @@ public:
     Movie(int id,string title);
     Movie (int,int,string);
     Movie();
+    ~Movie();
 
     void addRating(float);
     string getTitle()const;

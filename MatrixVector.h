@@ -1,6 +1,5 @@
 #ifndef MATRIXVECTOR_H
 #define MATRIXVECTOR_H
-#include<iostream>
 using namespace std;
 #include<vector>
 #include "Matrix.h"

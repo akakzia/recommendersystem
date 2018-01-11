@@ -1,9 +1,9 @@
 #ifndef MATRIXMAP_H
 #define MATRIXMAP_H
-#include<iostream>
 using namespace std;
 #include<map>
 #include<vector>
+
 #include "Matrix.h"
 class MatrixMap:public Matrix //Matrice organisée en map
 {

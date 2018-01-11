@@ -1,8 +1,5 @@
 #include"User.h"
-#include<iostream>
-#include<vector>
-#include <numeric>
-#include <functional>
+
 
 using namespace std;
 User::User(int i){
@@ -44,15 +41,16 @@ int User::getId()const{
 int User::gethId()const{
     return hId;
 }
+User::~User(){
+    profile.clear();
+    vector<float>().swap(ratings);
+
+}
 
 void User::setProfile(map <int,Movie> M){
     map<int, float> m_p;
     int n=0;
     cout<<"Setting Profile..."<<endl;
-    for(std::map<int,float>::iterator it=M[1].getProfile().begin(); it !=M[1].getProfile().end();it++){
-        profile.insert(pair<int,float>(it->first,0));
-    }
-
     for(std::map<int,Movie>::iterator it=M.begin(); it !=M.end();it++){
         if (ratings[it->second.gethId()]!=0){
             n++;

@@ -144,47 +144,41 @@
 	"Matrix2D.h"
 	"MatrixMap.h"
 
-1515532589 c:\users\bader\desktop\recommendersystem\movie.h
-	<iostream>
+1515692195 c:\users\bader\desktop\recommendersystem\movie.h
 	<string>
 	<vector>
 	<map>
 
-1514293251 c:\users\bader\desktop\recommendersystem\rating.h
-	<iostream>
+1515692308 c:\users\bader\desktop\recommendersystem\rating.h
 	<string>
 	<vector>
 
-1515111103 c:\users\bader\desktop\recommendersystem\user.h
-	<iostream>
+1515692195 c:\users\bader\desktop\recommendersystem\user.h
 	<string>
-	<vector>
 	<map>
+	<iostream>
+	<vector>
 	"Movie.h"
-	<algorithm>
 
 1514014645 c:\users\bader\desktop\recommendersystem\similarity.h
 	<vector>
 	<iostream>
 
-1515532997 c:\users\bader\desktop\recommendersystem\matrixvector.h
-	<iostream>
+1515691425 c:\users\bader\desktop\recommendersystem\matrixvector.h
 	<vector>
 	"Matrix.h"
 
-1515532980 c:\users\bader\desktop\recommendersystem\matrix.h
+1515691425 c:\users\bader\desktop\recommendersystem\matrix.h
 	<vector>
 
-1515534193 source:c:\users\bader\desktop\recommendersystem\main.cpp
+1515692195 source:c:\users\bader\desktop\recommendersystem\main.cpp
 	"CFAlgorithm.h"
 	"CBAlgorithm.h"
 
-1515622861 c:\users\bader\desktop\recommendersystem\matrix2d.h
-	<iostream>
+1515691425 c:\users\bader\desktop\recommendersystem\matrix2d.h
 	"Matrix.h"
 
-1515533674 c:\users\bader\desktop\recommendersystem\matrixmap.h
-	<iostream>
+1515691425 c:\users\bader\desktop\recommendersystem\matrixmap.h
 	<map>
 	<vector>
 	"Matrix.h"
@@ -192,29 +186,20 @@
 1514642958 c:\users\bader\desktop\recommendersystem\functions.h
 	<iostream>
 
-1515533345 source:c:\users\bader\desktop\recommendersystem\matrix.cpp
+1515692195 source:c:\users\bader\desktop\recommendersystem\matrix.cpp
 	"Matrix.h"
-	<iostream>
-	<vector>
 
-1515532986 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
+1515691425 source:c:\users\bader\desktop\recommendersystem\matrix2d.cpp
 	"Matrix2D.h"
-	<iostream>
 
-1515533684 source:c:\users\bader\desktop\recommendersystem\matrixmap.cpp
+1515691425 source:c:\users\bader\desktop\recommendersystem\matrixmap.cpp
 	"MatrixMap.h"
-	<iostream>
-	<map>
-	<vector>
 
-1515532590 source:c:\users\bader\desktop\recommendersystem\movie.cpp
+1515692308 source:c:\users\bader\desktop\recommendersystem\movie.cpp
 	"Movie.h"
-	<iostream>
-	<vector>
 
-1514293251 source:c:\users\bader\desktop\recommendersystem\rating.cpp
+1515692308 source:c:\users\bader\desktop\recommendersystem\rating.cpp
 	"Rating.h"
-	<iostream>
 
 1514578182 source:c:\users\bader\desktop\recommendersystem\similarity.cpp
 	"Similarity.h"
@@ -222,17 +207,11 @@
 	<vector>
 	<math.h>
 
-1515532590 source:c:\users\bader\desktop\recommendersystem\user.cpp
+1515692308 source:c:\users\bader\desktop\recommendersystem\user.cpp
 	"User.h"
-	<iostream>
-	<vector>
-	<numeric>
-	<functional>
 
-1515532995 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
+1515691425 source:c:\users\bader\desktop\recommendersystem\matrixvector.cpp
 	"MatrixVector.h"
-	<iostream>
-	<vector>
 
 1514757774 source:c:\users\bader\desktop\recommendersystem\data.cpp
 	<iostream>
@@ -346,8 +325,17 @@
 	<string>
 	"CFAlgorithm.h"
 
-1515622942 c:\users\bader\desktop\recommendersystem\cfalgorithm.h
+1515691162 c:\users\bader\desktop\recommendersystem\cfalgorithm.h
 	<iostream>
+	<locale>
+	<string>
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<sstream>
+	<string>
+	<map>
+	<math.h>
 	"User.h"
 	"Movie.h"
 	"Algorithm.h"
@@ -355,20 +343,8 @@
 	"MatrixVector.h"
 	"MatrixMap.h"
 	"Matrix2D.h"
-	<string>
 
-1515622912 c:\users\bader\desktop\recommendersystem\algorithm.h
-	<iostream>
-	"Rating.h"
-	"User.h"
-	"Movie.h"
-	"Matrix2D.h"
-	"MatrixMap.h"
-	"MatrixVector.h"
-	<string>
-	<map>
-
-1515534413 source:c:\users\bader\desktop\recommendersystem\cfalgorithm.cpp
+1515691478 c:\users\bader\desktop\recommendersystem\algorithm.h
 	<iostream>
 	<fstream>
 	<cstdlib>
@@ -382,33 +358,18 @@
 	"MatrixVector.h"
 	"Matrix2D.h"
 	"MatrixMap.h"
+
+1515691162 source:c:\users\bader\desktop\recommendersystem\cfalgorithm.cpp
 	"CFAlgorithm.h"
-	<locale>
 
-1515622912 source:c:\users\bader\desktop\recommendersystem\algorithm.cpp
-	<iostream>
-	<fstream>
-	<cstdlib>
-	<sstream>
-	<string>
-	<map>
-	<math.h>
-	"Movie.h"
-	"Rating.h"
-	"User.h"
-	"MatrixVector.h"
-	"Matrix2D.h"
-	"MatrixMap.h"
+1515691493 source:c:\users\bader\desktop\recommendersystem\algorithm.cpp
 	"Algorithm.h"
 
-1515533599 source:c:\users\bader\desktop\recommendersystem\cbalgorithm.cpp
+1515691625 source:c:\users\bader\desktop\recommendersystem\cbalgorithm.cpp
 	"CBAlgorithm.h"
 
-1515533599 c:\users\bader\desktop\recommendersystem\cbalgorithm.h
+1515691162 c:\users\bader\desktop\recommendersystem\cbalgorithm.h
 	<iostream>
-	<fstream>
-	<cstdlib>
-	<sstream>
 	<string>
 	<map>
 	<math.h>
@@ -419,7 +380,6 @@
 	"Matrix2D.h"
 	"MatrixMap.h"
 	"Algorithm.h"
-	<locale>
 
 1515681462 source:d:\2ata\in204\projet cpp\cloned\recommendersystem\cbalgorithm.cpp
 	"CBAlgorithm.h"

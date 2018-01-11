@@ -1,13 +1,11 @@
 #include"Matrix.h"
-#include<iostream>
-#include<vector>
+
 using namespace std;
 Matrix::Matrix(int rows ,int columns){
     dimCol = columns;
     dimRow = rows ;
 }
 Matrix::Matrix(){}
-
 float Matrix::getEl(int i,int j)const
 {
     return 0;

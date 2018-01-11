@@ -1,6 +1,4 @@
 #include"Matrix2D.h"
-#include<iostream>
-using namespace std;
 
 Matrix2D::Matrix2D(int rows, int columns):Matrix(rows,columns) {
     data = new float*[dimRow]();
