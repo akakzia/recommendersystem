@@ -15,6 +15,9 @@ class CFAlgorithm: public Algorithm
 public:
     CFAlgorithm(string, string, string);
     CFAlgorithm();
+    float cos_similarity(vector<float>,vector<float>);
+    float predictRate(map<int,User>, map<int,float>,int, int);
+    float predictRate(map<int,Movie>, map<int,float>,int, int);
     void cfuser(map<int,User>,map<int,Movie>,int);
     void cfitem(map<int,User>,map<int,Movie>,int);
     void execute(int);

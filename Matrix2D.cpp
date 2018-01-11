@@ -3,7 +3,6 @@
 using namespace std;
 
 Matrix2D::Matrix2D(int rows, int columns):Matrix(rows,columns) {
-    totalSize = dimCol * dimRow;
     data = new float*[dimRow]();
     for(int i = 0; i < dimRow; ++i)
     data[i] = new float[dimCol];
@@ -13,7 +12,6 @@ Matrix2D::Matrix2D(int rows, int columns):Matrix(rows,columns) {
     }
 }
 Matrix2D::Matrix2D():Matrix(10198,2114) {
-    totalSize = dimCol * dimRow;
     data = new float*[dimRow]();
     for(int i = 0; i < dimRow; ++i)
     data[i] = new float[dimCol];

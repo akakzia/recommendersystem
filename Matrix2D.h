@@ -9,7 +9,6 @@ using namespace std;
 class Matrix2D:public Matrix {
 private:
     float** data;
-    int totalSize;
 public:
     Matrix2D(int,int); // base ctor.
     Matrix2D();
