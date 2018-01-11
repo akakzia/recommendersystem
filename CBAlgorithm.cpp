@@ -106,7 +106,7 @@ void CBAlgorithm::execute(int methode){
             top_sim=getNeighbors(similarity,top);
             cout<<"The top 10 recommended movies are:"<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<allMovies[it->first].getTitle()<<":"<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<": movieid="<<it->first<<endl;
             }
     }
 
@@ -124,7 +124,7 @@ void CBAlgorithm::execute(int methode){
             top_sim=getNeighbors(similarity,top);
             cout<<"The top 10 recommended movies are:"<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<allMovies[it->first].getTitle()<<":"<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<": movieid="<<it->first<<endl;
             }
     }
     else if (methode==3){
@@ -141,7 +141,7 @@ void CBAlgorithm::execute(int methode){
             top_sim=getNeighbors(similarity,top);
             cout<<"The top 10 recommended movies are:"<<endl;
             for(std::map<int,float>::iterator it=top_sim.begin();it!=top_sim.end();it++){
-                cout<<allMovies[it->first].getTitle()<<":"<<it->first<<endl;
+                cout<<allMovies[it->first].getTitle()<<": movieid="<<it->first<<endl;
             }
 
 
