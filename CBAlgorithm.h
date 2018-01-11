@@ -27,7 +27,7 @@ public:
     CBAlgorithm();
     ~CBAlgorithm();
     float cos_similarity(map <int, float>,map <int, float>);
-    map <int,float> getTop(map <int,float> sim,int top);
+    map <int,float> getTop(map <int,float>,int);
     void execute(int);
 
 };

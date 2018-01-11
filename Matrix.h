@@ -7,10 +7,9 @@ using namespace std;
 
 class Matrix //Classe abstraite
 {
-public:
+protected:
     int dimCol;
     int dimRow;
-protected:
     Matrix(int,int);
     Matrix();
 public:

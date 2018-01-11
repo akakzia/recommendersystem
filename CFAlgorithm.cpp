@@ -20,7 +20,57 @@ CFAlgorithm::CFAlgorithm(string uAd,string mAd,string rAd):Algorithm(uAd, mAd, r
 CFAlgorithm::CFAlgorithm():Algorithm(){
 
 }
+float CFAlgorithm::cos_similarity(vector<float> U1,vector<float>U2){
+    float a=0;
+    float b=0;
+    float c=0;
+    int i=1;
+    int j1=0,j2;
+    float avg_U1=0;
+    float avg_U2=0;
 
+    avg_U1=U1[0];
+    avg_U2=U2[0];
+    for (int i=1; i<U1.size(); i++){
+        a=a+((U1[i]!=0)*(U1[i]-avg_U1))*((U2[i]-avg_U2)*(U2[i]!=0));
+        b=b+((U1[i]!=0)*(U1[i]-avg_U1))*(U1[i]-avg_U1);
+        c=c+((U2[i]-avg_U2)*(U2[i]!=0))*(U2[i]-avg_U2);
+    }
+        b=sqrt(b);
+        c=sqrt(c);
+        float r;
+        if(b*c!=0)
+        {
+            r=a/(b*c);
+            return r;
+        }
+        else {
+            return 0;
+        }
+}
+
+
+float CFAlgorithm::predictRate(map<int,User> U, map<int,float> c,int m, int v){
+    map<int,float> neigh=this->getNeighbors(c, v);
+    float num=0;
+    float denom=0;
+    for (std::map<int,float>::iterator it=neigh.begin(); it!=neigh.end(); ++it){
+        num=num + it->second*U[it->first].getRatings()[m];
+        denom=denom + it->second;
+    }
+        return num/denom;
+}
+float CFAlgorithm::predictRate(map<int,Movie> M, map<int,float> c,int m, int v){
+    map<int,float> neigh=this->getNeighbors(c, v);
+    float num=0;
+    float denom=0;
+    std::map<int,float>::iterator it;
+    for (it=neigh.begin(); it!=neigh.end(); ++it){
+        num=num + it->second*M[it->first].getRatings()[m];
+        denom=denom + it->second;
+    }
+        return num/denom;
+}
 void CFAlgorithm::cfuser(map<int,User> allUsers,map<int,Movie> allMovies,int how){
     int user=0; //user to predict
     int index=0; //user index
