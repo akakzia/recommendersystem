@@ -52,24 +52,34 @@ void CBAlgorithm::execute(int methode){
     map <int, float> similarity; //map of similarities of user with all movies
     map <int, float> top_sim;
     int top=10;
-    int index=0;
+    int index;
 
     cout << "--------------------------------LOADING CONTENT BASED ALGORITHM--------------------------------\n\n";
     loadMovies();
     loadUsers();
     cout << allMovies.size() << " Movies and " << allUsers.size() <<" Users loaded !\n";
+
+
+    if (methode==1){
+        learning_2D(allMovies,allUsers);
+    }
+    else if (methode==2){
+        learning_vector(allMovies,allUsers);
+    }
+    else{
+        learning_map(allMovies,allUsers);
+    }
     reuse:
+    index=0;
     while ((index > 2113) or (index < 1)){
         cout << "Enter the id of the user you want to recommend to : ";
         cin >> user;
         index=allUsers[user].gethId(); // return what when not found ?
     }
     if (methode==1){
-
-            learning_2D(allMovies,allUsers);
             allUsers[user].assignRatings(M_2D.getColumn(index));
             allUsers[user].setProfile(allMovies);
-            cout<<"calculating similarities..."<<endl;
+            cout<<"Predicting Top 10..."<<endl;
             for(std::map<int,Movie>::iterator it=allMovies.begin();it!=allMovies.end();it++){
                 if (allUsers[user].getRatings()[it->second.gethId()]==0){
                 similarity.insert(pair<int,float>(it->first,cos_similarity(allUsers[user].getProfile(),it->second.getProfile())));
@@ -81,13 +91,10 @@ void CBAlgorithm::execute(int methode){
                 cout<<allMovies[it->first].getTitle()<<" (id:"<<it->first<<")"<<endl;
             }
     }
-
     else if (methode==2){
-
-            learning_vector(allMovies,allUsers);
             allUsers[user].assignRatings(M_vector.getColumn(index));
             allUsers[user].setProfile(allMovies);
-            cout<<"calculating similarities..."<<endl;
+            cout<<"Predicting Top 10..."<<endl;
             for(std::map<int,Movie>::iterator it=allMovies.begin();it!=allMovies.end();it++){
                 if (allUsers[user].getRatings()[it->second.gethId()]==0){
                 similarity.insert(pair<int,float>(it->first,cos_similarity(allUsers[user].getProfile(),it->second.getProfile())));
@@ -99,12 +106,10 @@ void CBAlgorithm::execute(int methode){
                 cout<<allMovies[it->first].getTitle()<<" (id:"<<it->first<<")"<<endl;
             }
     }
-    else if (methode==3){
-
-            learning_map(allMovies,allUsers);
+    else{
             allUsers[user].assignRatings(M_map.getColumn(index));
             allUsers[user].setProfile(allMovies);
-            cout<<"calculating similarities..."<<endl;
+            cout<<"Predicting Top 10..."<<endl;
             for(std::map<int,Movie>::iterator it=allMovies.begin();it!=allMovies.end();it++){
                 if (allUsers[user].getRatings()[it->second.gethId()]==0){
                 similarity.insert(pair<int,float>(it->first,cos_similarity(allUsers[user].getProfile(),it->second.getProfile())));
