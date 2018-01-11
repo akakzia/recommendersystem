@@ -2,7 +2,7 @@
 
 CBAlgorithm::CBAlgorithm(){}
 CBAlgorithm::CBAlgorithm(string a,string b,string c):Algorithm(a,b,c){
-    std::ifstream file(movieFileAddress.c_str());
+    std::ifstream file("data/tags.csv");
 
     std::string line;
     std::getline(file, line);
@@ -19,14 +19,9 @@ CBAlgorithm::CBAlgorithm(string a,string b,string c):Algorithm(a,b,c){
         std::stringstream iss(line);
         std::string val;
         std::getline(iss, val, ';');
-        if ( !iss.good() )
-            break;
-
         std::stringstream convertor(val);
         convertor >> id;
         std::getline(iss, val, ';');
-        if ( !iss.good() )
-            break;
         tags.insert(std::pair<int,string>(id,val));
     }
 }
